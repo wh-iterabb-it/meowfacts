@@ -1,0 +1,41 @@
+{
+  "name": "meowfacts",
+  "version": "0.0.1",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wh-iterabb-it/meowfacts"
+  },
+  "bugs": {
+    "url": "https://github.com/wh-iterabb-it/meowfacts/issues"
+  },
+  "homepage": "https://github.com/wh-iterabb-it/meowfacts#readme",
+  "license": "GPL-3.0",
+  "scripts": {
+    "cover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && ./node_modules/.bin/codecov",
+    "start": "node app.js",
+    "test": "node_modules/.bin/mocha test/. --recursive",
+    "lint": "node_modules/.bin/eslint --format codeframe './lib/**/*.js'",
+    "lint-fix": "node_modules/.bin/eslint --fix --format codeframe './lib/**/*.js'"
+  },
+  "eslintConfig": {
+    "extends": "airbnb"
+  },
+  "dependencies": {
+    "server-side-tools": "git+https://github.com/wh-iterabb-it/server-side-tools.git"
+  },
+  "devDependencies": {
+    "chai": "4.1.2",
+    "codecov": "3.5.0",
+    "eslint": "6.1.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.14.3",
+    "eslint-plugin-react-hooks": "2.0.1",
+    "mocha": "6.2.0",
+    "nyc": "14.1.1",
+    "sinon": "7.4.1",
+    "sinon-chai": "3.3.0"
+  }
+}
