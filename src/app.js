@@ -26,14 +26,11 @@ app.use((req, res, next) => {
 logger.info('turning on app...');
 
   /**
-   * getSingle
    * @param {Request} req - Express request object
    * @param {Response} res - Express response object
    * @param {Next} next - Express Next object
    */
   app.get('/', (req, res, next) => {
-    const response = {};
-
     const li = [
       'In 1987 cats overtook dogs as the number one pet in America.',
       'Cats that live together sometimes rub each others heads to show that they have no intention of fighting.'
@@ -161,7 +158,12 @@ logger.info('turning on app...');
     res.status(200).send({ data: [li[Math.floor(Math.random() * li.length)]] });
   });
 
-  // starting the server
-  app.listen(3001, () => {
-    logger.info('listening on port 3001');
+
+
+  var server = app.listen(3000, function () {
+    var host = server.address().address;
+    var port = server.address().port;
+
+    console.log('App listening at http://%s:%s', host, port);
   });
+  module.exports = server;
