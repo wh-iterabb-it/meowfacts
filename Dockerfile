@@ -14,8 +14,8 @@ WORKDIR /usr/src/app
 # install node dependencies
 RUN npm install
 
-# Expose application port
-EXPOSE 80
+# expose server port
+EXPOSE 3000
 
 # launch application
 CMD ["npm","start"]
