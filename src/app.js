@@ -158,9 +158,8 @@ logger.info('turning on app...');
     res.status(200).send({ data: [li[Math.floor(Math.random() * li.length)]] });
   });
 
-
-
-  var server = app.listen(3000, function () {
+  // heroku dynamically assigns your app a port, so you can't set the port to a fixed number.
+  var server = app.listen(process.env.PORT || 5000, function () {
     var host = server.address().address;
     var port = server.address().port;
 
