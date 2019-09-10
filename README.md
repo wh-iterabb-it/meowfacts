@@ -8,7 +8,6 @@ catfacts
 [![codecov](https://codecov.io/gh/wh-iterabb-it/meowfacts/branch/master/graph/badge.svg)](https://codecov.io/gh/wh-iterabb-it/meowfacts)
 ![Heroku](https://heroku-badge.herokuapp.com/?app=meowfacts)
 
-=========
 
 ### Description:
 
