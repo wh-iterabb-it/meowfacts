@@ -1,4 +1,4 @@
-# catfacts
+catfacts
 =========
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/wh-iterabb-it/meowfacts.svg)](https://greenkeeper.io/)
@@ -7,6 +7,7 @@
 [![devDependency Status](https://img.shields.io/david/dev/wh-iterabb-it/meowfacts.svg?style=flat)](https://david-dm.org/wh-iterabb-it/meowfacts#info=devDependencies)
 [![codecov](https://codecov.io/gh/wh-iterabb-it/meowfacts/branch/master/graph/badge.svg)](https://codecov.io/gh/wh-iterabb-it/meowfacts)
 ![Heroku](https://heroku-badge.herokuapp.com/?app=meowfacts)
+
 =========
 
 ### Description:
