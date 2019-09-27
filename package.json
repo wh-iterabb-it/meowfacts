@@ -1,6 +1,6 @@
 {
   "name": "meowfacts",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A simple API which returns facts about cats",
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "test": "node_modules/.bin/mocha test/. --recursive"
   },
   "dependencies": {
-    "chai-http": "^4.3.0",
+    "chai-http": "4.3.0",
     "express": "4.17.1",
     "helmet": "3.21.1",
     "server-side-tools": "git+https://github.com/wh-iterabb-it/server-side-tools.git"
