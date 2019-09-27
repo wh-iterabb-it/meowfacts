@@ -6,7 +6,7 @@ services:
 language: node_js
 
 node_js:
-  - "10.15.0"
+  - "10.15.2"
 
 before_install:
   - docker build -t wh-iterabb-it/meowfacts .
