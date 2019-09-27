@@ -1,0 +1,20 @@
+sudo: required
+
+services:
+  - docker
+
+language: node_js
+
+node_js:
+  - "10.15.2"
+
+before_install:
+  - docker build -t wh-iterabb-it/meowfacts .
+script:
+  - docker run wh-iterabb-it/meowfacts npm run test
+  - docker run -e "CODECOV_TOKEN=${CODECOV_TOKEN}" wh-iterabb-it/meowfacts npm run cover
+
+notifications:
+  slack:
+    - secure: "gPBKAtkXFoZo6+Q4J2VWTr0feYGXy6LFVNheoIE3mlsmIIRVFztUpImppF+L6bjopLxcNiicpTDBbvqRN+GqRXzKgnvRVteaV6Mbeoc8X4LQF90o4Wkzt08XvoHqtH/d1ZtJlrFTAwX8FzFtGCNpAA+8RkKeobvvzqcfwPnXupuzZJcmY0ft5hQGVXD3lU19n6JWxq81h1NKWq8EhjrJiL+sNuKgzqWgnKnQPB8dGaHR2I9/eGleJD38KS0Pk2/+uarTk/D05A3WBSL2yIDV2Hvy6JRE5vNHQJYkj9uqdbT2spBtq2Nn4xaqiz+70bkOe6GvanL0uw87ujVu3+AS0qFoHQy4CS+Y8UReCbrmg/T1kDxOTw2g+syFsqnvqYWbvbpCkGC5JHKSkD9YOKbYCGYL1Jih6Q8Qxqzhb7FzhceAjHD4KfLy9X39oFjXlUUP4NtsMAWd+G9Uft45+wkYAR/hSlmOpvBfQ9spmGGMeOVVUX/9kzATCM6WfG5sb4uU2d4vZfw6MQHKpKugT7GbRrrcCJL8mx4eJ0cibUJgLFyp2T60SKdqCXwy99AhzWhpRFt7fE/ZMOr/say73FLEBGBkgwntLkvQVuRZpu5wiRlUW46Rl2QnGgluqIMf5KJSjPk8sPiVkYS3oZ1hbLVvAQUHJ+ySRUdi2iZEEN8XR9I="
+    - secure: "0czSmnpsWk2pqtqA5028K5jrcBGVtWUMla9FcT0hugaftvGjyQD8E0QcyMZM3x+1vJXLzeNcECCeOeRbOGTIw7H81rD40PXZkBl1w+c3Nen/F/kAicfigzqIdGfnugJA2u+cGaOPEJNq8BHu1JN/NRqgPn3N3/rVp4UcLmTP+yFCZtLlmaVGhzr2kKdGwu5TTWWJOVyTRujaQp5RN83D6MBsIszQvwgVw1XRvJedU3uavaCkX+BRURx+63gUO2OJx/N9CS5FrE+su8lKed747TCv7++io1jOuox8oDK2lf0nM+M1W0eil5ruiiotJ6aaQGu28ckVsT/K0LkhpraZlQ1IbrzxnhURVNsvshUS+qASEoSCaz58lQ90F6bv78VHgxerMirjUIfo9yJjBbLvvfTI3QzWeepmIU1HPJqsC/ILk3D3bsF/j563h+W83HBwXCKQLNMH6B5EziJmcUPhbH/DG4AkvXRsGHW71bFlPNr0eX/PBLiBhPY5FfYkXiP1iXwwHN7k94WYEBL5yKlu7AvGZNicdO8ZnUmLBY4vA6uVIhfzvmUdiB9XQNONmA+L4eSxFW83zDnelyXJ8kUogUog6d2xgWFkseN3blExs3hLMYKbhV2HuDleSt3oWwonrPwwURjTfI3iLLjpnfUOl5ljiJcP3IQ2l04IfFO69mM="
