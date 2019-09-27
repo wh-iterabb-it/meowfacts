@@ -1,4 +1,5 @@
 const logger = require('server-side-tools').logger;
+const {toDDHHMMSS} = require('server-side-tools').format;
 const express = require('express');
 const helmet = require('helmet');
 const bodyParser = require('body-parser');
@@ -156,6 +157,17 @@ logger.info('turning on app...');
       'Cats have 30 vertebrae--5 more than humans have.',
     ];
     res.status(200).send({ data: [li[Math.floor(Math.random() * li.length)]] });
+  });
+
+  /**
+   * @param {Request} req - Express request object
+   * @param {Response} res - Express response object
+   * @param {Next} next - Express Next object
+   */
+  app.get('/health', (req, res, next) => {
+    const time = process.uptime();
+    const uptime = format.toDDHHMMSS(time + '');
+    res.status(200).send({ data: {uptime: toDDHHMMSS(uptime + '')} });
   });
 
   // heroku dynamically assigns your app a port, so you can't set the port to a fixed number.
