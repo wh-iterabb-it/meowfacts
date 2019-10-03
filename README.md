@@ -13,7 +13,7 @@ meowfacts
 a simply api that returns a random fact about cats on a GET request
 
 ### Documentation
-[!https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/assets/SW-logo-clr.png](https://app.swaggerhub.com/apis/whiterabbit8/meowfacts/1.0.0)
+![https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/assets/SW-logo-clr.png](https://app.swaggerhub.com/apis/whiterabbit8/meowfacts/1.0.0)
 
 
 ### Installation
@@ -31,6 +31,9 @@ npm run start
 ### Dedication && Funding
 
 This api is dedicated to [pistachio](https://www.instagram.com/p/7yARQdmZP3/), she brought me great comfort in dire times. Words can't describe the debt I owe to her. If you enjoy this api, or just love cats, please donate to
+
 https://www.animalprojectnyc.org/
+
 https://www.paypal.me/animalproject
+
 Its a struggling `no kill` cat shelter in the heart of new york. I can say personally having volunteered for them, even a few cents donation would make a difference for the very small organization.
