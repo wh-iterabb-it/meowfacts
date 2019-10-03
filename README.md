@@ -30,7 +30,11 @@ npm run start
 
 ### Dedication && Funding
 
-This api is dedicated to [pistachio](https://www.instagram.com/p/7yARQdmZP3/), she brought me great comfort in dire times. Words can't describe the debt I owe to her. If you enjoy this api, or just love cats, please donate to
+This api is dedicated to pistachio
+
+![](https://i.imgur.com/2EGh2Bp.jpg)
+
+she brought me great comfort in dire times. Words can't describe the debt I owe to her. If you enjoy this api, or just love cats, please donate to
 
 https://www.animalprojectnyc.org/
 
