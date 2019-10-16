@@ -9,8 +9,8 @@ info:
   contact:
     email: beau@beaubouchard.com
   license:
-    name: Apache 2.0
-    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+    name: MIT License
+    url: 'https://github.com/wh-iterabb-it/meowfacts/blob/master/LICENSE'
 tags:
   - name: public
     description: Operations available to the public
