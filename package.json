@@ -1,6 +1,6 @@
 {
   "name": "meowfacts",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A simple API which returns facts about cats",
   "repository": {
     "type": "git",
