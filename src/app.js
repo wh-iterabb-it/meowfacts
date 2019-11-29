@@ -14,6 +14,9 @@ app.use(helmet());
 // using bodyParser to parse json bodies into js objects
 app.use(bodyParser.json());
 
+// request count resets on dynamo spin down, as intended
+let requestsCount = 0;
+
 /** set up cors middleware
  * @param {Request} req - Express request object
  * @param {Response} res - Express response object
@@ -34,6 +37,7 @@ logger.info('turning on app...');
  * @param {Next} next - Express Next object
  */
 app.get('/', (req, res, next) => {
+  requestsCount++;
   res.status(200).send({ data: [facts.getSingle()] });
 });
 
@@ -43,9 +47,10 @@ app.get('/', (req, res, next) => {
  * @param {Next} next - Express Next object
  */
 app.get('/health', (req, res, next) => {
+  requestsCount++;
   const time = process.uptime();
   const uptime = format.toDDHHMMSS(time + '');
-  res.status(200).send({ data: {uptime: uptime, version: pkjson.version} });
+  res.status(200).send({ data: {uptime: uptime, version: pkjson.version, requests: requestsCount} });
 });
 
 // heroku dynamically assigns your app a port, so you can't set the port to a fixed number.
