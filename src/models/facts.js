@@ -137,6 +137,11 @@ function getSingle () {
     'The worlds largest cat measured 48.5 inches long. https://www.youtube.com/watch?v=gc5M0aGc_EI',
     'Evidence suggests domesticated cats have been around since 3600 B.C., 2,000 years before Egypts pharaohs.',
     'A cats purr may be a form of self-healing, as it can be a sign of nervousness as well as contentment.',
+    'Similarly, the frequency of a domestic cats purr is the same at which muscles and bones repair themselves.',
+    'Adult cats only meow to communicate with humans.',
+    'The worlds richest cat is worth $13 million after his human passed away and left her fortune to him.',
+    'Your cat recognizes your voice but just acts too cool to care (probably because they are).',
+    'Cats are often lactose intolerant, so stop givin them milk!',
   ];
 
   return li[Math.floor(Math.random() * li.length)];
