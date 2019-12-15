@@ -20,4 +20,15 @@ describe('Main', () => {
     });
   });
 
+  describe('/GET health', () => {
+    it('it should have successful GET', (done) => {
+      chai.request(app)
+        .get('/health')
+        .end((err, res) => {
+          res.should.have.status(200);
+          done();
+      });
+    });
+  });
+
 });
