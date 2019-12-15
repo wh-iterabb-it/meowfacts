@@ -122,6 +122,21 @@ function getSingle () {
     'A cat\'s brain is more similar to a man\'s brain than that of a dog.',
     'A cat has more bones than a human; humans have 206, and the cat - 230.',
     'Cats have 30 vertebrae--5 more than humans have.',
+    'Cats are the most popular pet in the United States: There are 88 million pet cats and 74 million dogs.',
+    'Cats have over 20 muscles that control their ears.',
+    'A group of cats is called a clowder.',
+    'There are cats who have survived falls from over 32 stories (320 meters) onto concrete.',
+    'Cats sleep 70% of their lives.',
+    'A cat has been mayor of Talkeetna, Alaska, for 15 years. His name is Stubbs.',
+    'A cat has ran for mayor of Mexico City in 2013.',
+    'In tigers and tabbies, the middle of the tongue is covered in backward-pointing spines, used for breaking off and gripping meat.',
+    'When cats grimace, they are usually "taste-scenting." They have an extra organ that, with some breathing control, allows the cats to taste-sense the air.',
+    'Cats can not taste sweetness.',
+    'Owning a cat can reduce the risk of stroke and heart attack by a third.',
+    'Wikipedia has a recording of a cat meowing because why not?',
+    'The worlds largest cat measured 48.5 inches long. https://www.youtube.com/watch?v=gc5M0aGc_EI',
+    'Evidence suggests domesticated cats have been around since 3600 B.C., 2,000 years before Egypts pharaohs.',
+    'A cats purr may be a form of self-healing, as it can be a sign of nervousness as well as contentment.',
   ];
 
   return li[Math.floor(Math.random() * li.length)];
