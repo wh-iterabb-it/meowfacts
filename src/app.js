@@ -39,6 +39,7 @@ logger.info('turning on app...');
  */
 app.get('/', (req, res, next) => {
   requestsCount++;
+  logger.info(`/ request from ${req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.ip}`);
   res.status(200).send({ data: [facts.getSingle()] });
 });
 
@@ -51,6 +52,7 @@ app.get('/health', (req, res, next) => {
   requestsCount++;
   const time = process.uptime();
   const uptime = format.toDDHHMMSS(time + '');
+  logger.info(`/health request from ${req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.ip}`);
   res.status(200).send({ data: {uptime: uptime, version: pkjson.version, requests: requestsCount} });
 });
 
