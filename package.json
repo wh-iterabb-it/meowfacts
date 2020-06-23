@@ -20,7 +20,7 @@
     "chai-http": "4.3.0",
     "express": "4.17.1",
     "helmet": "3.23.0",
-    "newrelic": "6.9.0",
+    "newrelic": "6.10.0",
     "server-side-tools": "git+https://github.com/wh-iterabb-it/server-side-tools.git"
   },
   "devDependencies": {
