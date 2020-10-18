@@ -1,4 +1,3 @@
-require('newrelic');
 const logger = require('server-side-tools').logger;
 const format = require('server-side-tools').format;
 const express = require('express');
