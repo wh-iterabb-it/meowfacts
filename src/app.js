@@ -32,6 +32,17 @@ app.use((req, res, next) => {
 logger.info('turning on app...');
 
 /**
+ * Check if user entered valid query parameter
+ * @param {Number} param 
+ */
+function checkParam (param) {
+  if (param<=0 || param>96) {
+      return false
+  }
+  return true
+}
+
+/**
  * @param {Request} req - Express request object
  * @param {Response} res - Express response object
  * @param {Next} next - Express Next object
@@ -39,6 +50,19 @@ logger.info('turning on app...');
 app.get('/', (req, res, next) => {
   requestsCount++;
   logger.info(`/ request from ${req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.ip}`);
+  const { factID, count } = req.query;
+  if (factID) {
+    if (!checkParam(factID)) {
+      return res.status(500).send({error:`${factID} Is Invalid Please Enter Valid ID`})
+    }
+    return res.status(200).send({ data: [facts.getSingle(factID)] })
+  }
+  if (count) {
+    if (!checkParam(count)) {
+      return res.status(500).send({error:`${count} Is Invalid Please Enter Valid Count`})
+    }
+    return res.status(200).send({ data: facts.getMultiple(count) })
+  }
   res.status(200).send({ data: [facts.getSingle()] });
 });
 

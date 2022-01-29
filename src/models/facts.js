@@ -1,4 +1,7 @@
-function getSingle () {
+/**
+ * @param {Number} factID 
+ */
+function getSingle (factID=null) {
   const li = [
     'In 1987 cats overtook dogs as the number one pet in America.',
     'Cats that live together sometimes rub each others heads to show that they have no intention of fighting.'
@@ -143,9 +146,22 @@ function getSingle () {
     'Your cat recognizes your voice but just acts too cool to care (probably because they are).',
     'Cats are often lactose intolerant, so stop givin them milk!',
   ];
-
+  if (factID) {
+    const id = factID-1;
+    return li[id]
+  }
   return li[Math.floor(Math.random() * li.length)];
 }
 
+/**
+ * @param {Number} count 
+ */
+function getMultiple (count) {
+    let facts = [];
+    for (let idx = 0; idx < count; idx++) {
+      facts.push(getSingle());
+    }
+    return facts;
+}
 
-module.exports = {getSingle}
+module.exports = { getSingle, getMultiple }
