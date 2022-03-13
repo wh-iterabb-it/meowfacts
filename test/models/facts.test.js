@@ -13,4 +13,17 @@ describe('Main', () => {
     });
   });
 
+  describe('Testing the facts count model', () => {
+    it('it should return 5 facts', () => {
+      const actual = facts.getCountedFacts(5);
+      expect(actual).to.have.length(5);
+    });
+  });
+
+  describe('Testing the facts count model with undefined', () => {
+    it('it should return 1 fact', () => {
+      const actual = facts.getCountedFacts(undefined);
+      expect(actual).to.have.length(1);
+    });
+  });
 });

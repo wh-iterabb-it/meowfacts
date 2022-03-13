@@ -39,7 +39,7 @@ logger.info('turning on app...');
 app.get('/', (req, res, next) => {
   requestsCount++;
   logger.info(`/ request from ${req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.ip}`);
-  res.status(200).send({ data: [facts.getSingle()] });
+  res.status(200).send({ data: facts.getCountedFacts(req.query['count']) });
 });
 
 /**

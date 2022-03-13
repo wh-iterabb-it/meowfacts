@@ -147,5 +147,10 @@ function getSingle () {
   return li[Math.floor(Math.random() * li.length)];
 }
 
+function getCountedFacts(count) {
+  if (count == undefined) return [getSingle()];
+  else if (count <= 0) return [];
+  else return [getSingle()].concat(getCountedFacts(--count));
+}
 
-module.exports = {getSingle}
+module.exports = {getSingle, getCountedFacts}
