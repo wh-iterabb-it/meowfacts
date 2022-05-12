@@ -1,5 +1,4 @@
-const logger = require('server-side-tools').logger;
-const format = require('server-side-tools').format;
+const { convert, logger, format } = require('sst');
 const express = require('express');
 const helmet = require('helmet');
 const bodyParser = require('body-parser');
@@ -38,8 +37,28 @@ logger.info('turning on app...');
  */
 app.get('/', (req, res, next) => {
   requestsCount++;
-  logger.info(`/ request from ${req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.ip}`);
-  res.status(200).send({ data: [facts.getSingle()] });
+  const user = req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.ip;
+  logger.info(`/ request from ${user}`);
+  if ((req.query.count) && req.query.count.length > 0) {
+    const count = convert.toNumber(req.query.count);
+    if(count>=1 || count<=96) {
+      return res.status(200).send({ data: facts.getMany(count) });
+    } else {
+      return res.status(500).send({error:`${count} is an invalid count, please enter a number from 1 to 96`});
+    }
+  } else {
+    if ((req.query.id) && req.query.id.length > 0) {
+      const id = convert.toNumber(req.query.id);
+      if(id>=1 || id<=96) {
+        return res.status(200).send({ data: [facts.getSingle(id)] });
+      } else {
+        return res.status(500).send({error:`${id} is an invalid id, please enter a number from 1 to 96`});
+      }
+    }
+    else {
+      return res.status(200).send({ data: [facts.getSingle()] });
+    }
+  }
 });
 
 /**
@@ -49,9 +68,10 @@ app.get('/', (req, res, next) => {
  */
 app.get('/health', (req, res, next) => {
   requestsCount++;
+  const user = req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.ip;
   const time = process.uptime();
   const uptime = format.toDDHHMMSS(time + '');
-  logger.info(`/health request from ${req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.ip}`);
+  logger.info(`/health request from ${user}`);
   res.status(200).send({ data: {uptime: uptime, version: pkjson.version, requests: requestsCount} });
 });
 

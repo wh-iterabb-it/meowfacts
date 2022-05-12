@@ -1,0 +1,25 @@
+name: Default Node CI
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  tests:
+    name: tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code from Branch
+        uses: actions/checkout@v2
+      - name: Set up Node Environment
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: Install Dependencies
+        working-directory: .
+        run: npm ci
+      - name: Build Docker Image "wh-iterabb-it/meowfacts"
+        run: docker build -t wh-iterabb-it/meowfacts .
+      - name: Run The Tests!!!
+        run: docker run wh-iterabb-it/meowfacts npm run test
+
