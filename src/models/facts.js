@@ -126,4 +126,4 @@ function getMany(count) {
     .map((index) => facts[index]);
 }
 
-module.exports = { getSingle, getMany };
+module.exports = { getSingle, getMany, facts };

@@ -7,14 +7,27 @@ const facts = require("./models/facts");
 
 const app = express();
 
+// request count resets on dynamo spin down, as intended
+let requestsCount = 0;
+
 // adding helmet to enhance api security
 app.use(helmet());
 
 // using bodyParser to parse json bodies into js objects
 app.use(bodyParser.json());
 
-// request count resets on dynamo spin down, as intended
-let requestsCount = 0;
+/**
+ * Check if user entered valid query parameter
+ * @param {Number} param
+ * @returns {Boolean} true if valid
+ */
+function checkParam(param) {
+  const safeParam = convert.toNumber(param);
+  if (safeParam <= 1 || safeParam >= facts.facts.length) {
+    return false;
+  }
+  return true;
+}
 
 /** set up cors middleware
  * @param {Request} req - Express request object
@@ -31,20 +44,19 @@ app.use((req, res, next) => {
   next();
 });
 
-logger.info("turning on app...");
-
 /**
- * Check if user entered valid query parameter
- * @param {Number} param
- * @returns {Boolean} true if valid
+ * @param {Request} req - Express request object
+ * @param {Response} res - Express response object
+ * @param {Next} next - Express Next object
  */
-function checkParam(param) {
-  const safeParam = convert.toNumber(param);
-  if (safeParam <= 1 || safeParam >= 96) {
-    return false;
-  }
-  return true;
-}
+app.use((req, res, next) => {
+  const user =
+    req.headers["x-forwarded-for"] || req.connection.remoteAddress || req.ip;
+  logger.info(`request from ${user}`);
+  next();
+});
+
+logger.info("turning on app...");
 
 /**
  * @param {Request} req - Express request object
@@ -52,9 +64,6 @@ function checkParam(param) {
  */
 app.get("/", (req, res) => {
   requestsCount++;
-  const user =
-    req.headers["x-forwarded-for"] || req.connection.remoteAddress || req.ip;
-  logger.info(`/ request from ${user}`);
   if (req.query.count && req.query.count.length > 0) {
     const count = convert.toNumber(req.query.count);
     if (checkParam(count)) {
@@ -86,11 +95,8 @@ app.get("/", (req, res) => {
  */
 app.get("/health", (req, res) => {
   requestsCount++;
-  const user =
-    req.headers["x-forwarded-for"] || req.connection.remoteAddress || req.ip;
   const time = process.uptime();
   const uptime = format.toDDHHMMSS(time + "");
-  logger.info(`/health request from ${user}`);
   res.status(200).send({
     data: {
       uptime: uptime,
