@@ -43,8 +43,7 @@ const facts = [
   "Abraham Lincoln loved cats. He had four of them while he lived in the White House.",
   "Julius Ceasar, Henri II, Charles XI, and Napoleon were all afraid of cats.",
   "Cats have an average of 24 whiskers, arranged in four horizontal rows on each side.",
-  'The word "cat" in various languages: French: chat; German: katze; Italian: gatto; Spanish/Portugese: ga' +
-    "to; Yiddish: kats; Maltese: qattus; Swedish/Norwegian: katt; Dutch: kat; Icelandic: kottur; Greek: catta; Hindu: katas; Japanese:neko; Polish: kot; Ukranian: kotuk; Hawiian: popoki; Russian: koshka; Latin: cattus; Egyptian: mau; Turkish: kedi; Armenian: Gatz; Chinese: mio; Arabic: biss; Indonesian: qitta; Bulgarian: kotka; Malay: kucing; Thai/Vietnamese: meo; Romanian: pisica; Lithuanian: katinas; Czech: kocka; Slovak: macka; Armenian: gatz; Basque: catua; Estonian: kass; Finnish: kissa; Swahili: paka.",
+  "The word 'cat' in various languages: French: chat; German: katze; Italian: gatto; Spanish/Portugese: gato; Yiddish: kats; Maltese: qattus; Swedish/Norwegian: katt; Dutch: kat; Icelandic: kottur; Greek: catta; Hindu: katas; Japanese:neko; Polish: kot; Ukranian: kotuk; Hawiian: popoki; Russian: koshka; Latin: cattus; Egyptian: mau; Turkish: kedi; Armenian: Gatz; Chinese: mio; Arabic: biss; Indonesian: qitta; Bulgarian: kotka; Malay: kucing; Thai/Vietnamese: meo; Romanian: pisica; Lithuanian: katinas; Czech: kocka; Slovak: macka; Armenian: gatz; Basque: catua; Estonian: kass; Finnish: kissa; Swahili: paka.",
   "Statistics indicate that animal lovers in recent years have shown a preference for cats over dogs!",
   "Cats can be taught to walk on a leash, but a lot of time and patience is required to teach them. The younger the cat is, the easier it will be for them to learn.",
   "Purring not always means happiness. Purring could mean a cat is in terrible pain such as during childbirth. Kitten will purr to their mother to let her know they are getting enough milk while nursing. Purring is a process of inhaling and exhaling, usually performed while the mouth is closed. But don't worry, if your cat is purring while your gently petting her and holding her close to you - that is a happy cat!",
@@ -62,8 +61,7 @@ const facts = [
   "The Maine Coon is 4 to 5 times larger than the Singapura, the smallest breed of cat.",
   "Tabby cats are thought to get their name from Attab, a district in Baghdad, now the capital of Iraq.",
   "Retractable claws are a physical phenomenon that sets cats apart from the rest of the animal kingdom. In the cat family, only cheetahs cannot retract their claws.",
-  'Not every cat gets "high" from catnip. Whether or not a cat responds to it depends upon a recessive gen' +
-    "e: no gene, no joy.",
+  "Not every cat gets 'high' from catnip. Whether or not a cat responds to it depends upon a recessive gene: no gene, no joy.",
   "A cat can sprint at about thirty-one miles per hour.",
   "In ancient Egypt, when a family cat died, all family members would shave their eyebrows as a sign of mourning.",
   "Cats have been domesticated for half as long as dogs have been.",
