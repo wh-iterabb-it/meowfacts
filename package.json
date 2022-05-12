@@ -14,7 +14,9 @@
   "scripts": {
     "cover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && ./node_modules/.bin/codecov",
     "start": "node ./src/app.js",
-    "test": "node_modules/.bin/mocha test/. --recursive"
+    "test": "node_modules/.bin/mocha test/. --recursive",
+    "test:lint": "eslint .",
+    "test:lint:fix": "eslint . --fix --ignore-pattern polyfills"
   },
   "dependencies": {
     "chai-http": "4.3.0",
@@ -25,7 +27,12 @@
   "devDependencies": {
     "chai": "4.2.0",
     "codecov": "3.8.3",
-    "mocha": "^10.0.0",
+    "eslint": "8.15.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "mocha": "10.0.0",
+    "prettier": "2.6.2",
     "nyc": "15.1.0"
   }
 }
