@@ -41,9 +41,23 @@ app.get('/', (req, res, next) => {
   logger.info(`/ request from ${user}`);
   if ((req.query.count) && req.query.count.length > 0) {
     const count = convert.toNumber(req.query.count);
-    res.status(200).send({ data: facts.getMany(count) });
+    if(count>=1 || count<=96) {
+      return res.status(200).send({ data: facts.getMany(count) });
+    } else {
+      return res.status(500).send({error:`${count} is an invalid count, please enter a number from 1 to 96`});
+    }
   } else {
-    res.status(200).send({ data: [facts.getSingle()] });
+    if ((req.query.id) && req.query.id.length > 0) {
+      const id = convert.toNumber(req.query.id);
+      if(id>=1 || id<=96) {
+        return res.status(200).send({ data: [facts.getSingle(id)] });
+      } else {
+        return res.status(500).send({error:`${id} is an invalid id, please enter a number from 1 to 96`});
+      }
+    }
+    else {
+      return res.status(200).send({ data: [facts.getSingle()] });
+    }
   }
 });
 

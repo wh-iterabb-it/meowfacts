@@ -143,10 +143,26 @@ const facts = [
   'Cats are often lactose intolerant, so stop givin them milk!',
 ];
 
-function getSingle () {
-  return facts[Math.floor(Math.random() * li.length)];
+/**
+ * getSingle
+ * @description A simple function to return a random catfact
+ * @param {Number} ID - the specific index / unique id of a fact starting at 1
+ * @returns {String} - a single fact about cats
+**/
+function getSingle (ID=null) {
+  if (ID) {
+    const id = ID-1;
+    return facts[id]
+  }
+  return facts[Math.floor(Math.random() * facts.length)];
 }
 
+/**
+ * getSingle
+ * @description A simple function to return multiple random catfacts
+ * @param {Number} count is a required param the number of catfacts to return in an array
+ * @returns {Array[String]} many facts returned
+**/
 function getMany(count) {
   return [...Array(facts.length).keys()].sort(() => 0.5 - Math.random()).slice(0, count).map(index => facts[index]);
 }
