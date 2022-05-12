@@ -126,4 +126,6 @@ function getMany(count) {
     .map((index) => facts[index]);
 }
 
-module.exports = { getSingle, getMany };
+const factList = facts;
+
+module.exports = { getSingle, getMany, factList };
