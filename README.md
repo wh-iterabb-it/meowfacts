@@ -2,7 +2,7 @@ meowfacts
 =========
 
 ![Known Vulnerabilities](https://snyk.io/test/github/wh-iterabb-it/meowfacts/badge.svg) 
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/wh-iterabb-it/meowfacts.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Crucible-Standard/obiter-dictum/alerts/) 
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/wh-iterabb-it/meowfacts.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/wh-iterabb-it/meowfacts/alerts/) 
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/wh-iterabb-it/meowfacts.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/wh-iterabb-it/meowfacts/context:javascript)
 [![Travis Badge](https://travis-ci.org/wh-iterabb-it/meowfacts.svg?branch=master)](https://travis-ci.org/wh-iterabb-it/meowfacts)
 [![codecov](https://codecov.io/gh/wh-iterabb-it/meowfacts/branch/master/graph/badge.svg)](https://codecov.io/gh/wh-iterabb-it/meowfacts)
