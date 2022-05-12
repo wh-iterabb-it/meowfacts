@@ -23,7 +23,7 @@ app.use(bodyParser.json());
  */
 function checkParam(param) {
   const safeParam = convert.toNumber(param);
-  if (safeParam <= 1 || safeParam >= 96) {
+  if (safeParam <= 1 || safeParam >= facts.facts.length) {
     return false;
   }
   return true;
