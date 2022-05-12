@@ -10,7 +10,7 @@ meowfacts
 
 ### Description:
 
-a simply api that returns a random fact about cats on a GET request
+A simple api that returns a random fact about cats on a GET request
 
 ### Documentation
 [![](https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/assets/SW-logo-clr.png)](https://app.swaggerhub.com/apis-docs/whiterabbit8/meowfacts/1.0.0)
