@@ -31,6 +31,18 @@ app.use((req, res, next) => {
 logger.info('turning on app...');
 
 /**
+ * Check if user entered valid query parameter
+ * @param {Number} param 
+ * @returns {Boolean} true if valid
+ */
+function checkParam (param) {
+  if (param<=1 || param>=96) {
+    return false
+  }
+  return true
+}
+
+/**
  * @param {Request} req - Express request object
  * @param {Response} res - Express response object
  * @param {Next} next - Express Next object
