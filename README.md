@@ -1,10 +1,10 @@
 meowfacts
 =========
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/wh-iterabb-it/meowfacts.svg)](https://greenkeeper.io/)
+![Known Vulnerabilities](https://snyk.io/test/github/wh-iterabb-it/meowfacts/badge.svg) 
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/wh-iterabb-it/meowfacts.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/wh-iterabb-it/meowfacts/alerts/) 
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/wh-iterabb-it/meowfacts.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/wh-iterabb-it/meowfacts/context:javascript)
 [![Travis Badge](https://travis-ci.org/wh-iterabb-it/meowfacts.svg?branch=master)](https://travis-ci.org/wh-iterabb-it/meowfacts)
-[![Dependency Status](https://img.shields.io/david/wh-iterabb-it/meowfacts.svg?style=flat)](https://david-dm.org/wh-iterabb-it/meowfacts#info=Dependencies)
-[![devDependency Status](https://img.shields.io/david/dev/wh-iterabb-it/meowfacts.svg?style=flat)](https://david-dm.org/wh-iterabb-it/meowfacts#info=devDependencies)
 [![codecov](https://codecov.io/gh/wh-iterabb-it/meowfacts/branch/master/graph/badge.svg)](https://codecov.io/gh/wh-iterabb-it/meowfacts)
 
 
