@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:16.15.0-buster-slim
 
 # copy files to working directory
 COPY . /usr/src/app/
