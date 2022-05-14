@@ -3,7 +3,7 @@ FROM node:14-alpine
 # copy files to working directory
 COPY . /usr/src/app/
 
-# change working directory
+# change to working directory
 WORKDIR /usr/src/app
 
 # install node dependencies
