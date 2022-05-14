@@ -5,21 +5,38 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  tests:
-    name: tests
+  lint:
+    name: lints
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code from Branch
+      - name: Checking Out Commits Securely . . .
         uses: actions/checkout@v2
-      - name: Set up Node Environment
+      - name: Setup Node 14 Environment . . .
         uses: actions/setup-node@v1
         with:
           node-version: 14
-      - name: Install Dependencies
+      - name: Install Dependencies . . .
         working-directory: .
         run: npm ci
       - name: Build Docker Image "wh-iterabb-it/meowfacts"
         run: docker build -t wh-iterabb-it/meowfacts .
-      - name: Run The Tests!!!
+      - name: Run The Lints . . .
+        run: docker run wh-iterabb-it/meowfacts npm run test:lint
+  tests:
+    name: tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking Out Commits Securely . . .
+        uses: actions/checkout@v2
+      - name: Setup Node 14 Environment . . .
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: Install Dependencies . . .
+        working-directory: .
+        run: npm ci
+      - name: Build Docker Image "wh-iterabb-it/meowfacts"
+        run: docker build -t wh-iterabb-it/meowfacts .
+      - name: Run The Tests . . .
         run: docker run wh-iterabb-it/meowfacts npm run test
 

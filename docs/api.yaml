@@ -4,13 +4,13 @@ servers:
     url: https://virtserver.swaggerhub.com/whiterabbit8/meowfacts/1.0.0
 info:
   description: This is a simple API to get facts, facts about cats, meow
-  version: "1.0.0"
+  version: "1.0.1"
   title: MEOW
   contact:
     email: beau@beaubouchard.com
   license:
     name: MIT License
-    url: 'https://github.com/wh-iterabb-it/meowfacts/blob/master/LICENSE'
+    url: 'https://github.com/wh-iterabb-it/meowfacts/blob/main/LICENSE'
 tags:
   - name: public
     description: Operations available to the public
