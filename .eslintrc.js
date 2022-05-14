@@ -9,7 +9,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 12,
   },
-  ignorePatterns: ["/test/**"],
+  ignorePatterns: ["/tests/**"],
   rules: {
     "prettier/prettier": ["error"],
   },
