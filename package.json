@@ -11,19 +11,6 @@
   },
   "homepage": "https://github.com/wh-iterabb-it/meowfacts#readme",
   "license": "GPL-3.0",
-  {
-  "name": "meowfacts",
-  "version": "0.3.2",
-  "description": "A simple API which returns facts about cats",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wh-iterabb-it/meowfacts"
-  },
-  "bugs": {
-    "url": "https://github.com/wh-iterabb-it/meowfacts/issues"
-  },
-  "homepage": "https://github.com/wh-iterabb-it/meowfacts#readme",
-  "license": "GPL-3.0",
   "contributors": [
     "Beau Bouchard <https://github.com/BeauBouchard>",
     "Mohammed <https://github.com/Mohammed785>"
