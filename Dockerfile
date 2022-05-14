@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:14-alpine
 
 # copy files to working directory
 COPY . /usr/src/app/
