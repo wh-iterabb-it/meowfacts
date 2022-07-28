@@ -19,11 +19,12 @@ app.use(bodyParser.json());
 /**
  * Check if user entered valid query parameter
  * @param {Number} param
+ * @param {String} lang
  * @returns {Boolean} true if valid
  */
-function checkParam(param) {
+function checkParam(param, lang) {
   const safeParam = convert.toNumber(param);
-  if (safeParam <= 1 || safeParam >= facts.facts.length) {
+  if (safeParam <= 1 || safeParam >= facts.getLanguageFacts(lang).length) {
     return false;
   }
   return true;
@@ -64,10 +65,18 @@ logger.info("turning on app...");
  */
 app.get("/", (req, res) => {
   requestsCount++;
+  const language = () => {
+    if (req.query.language !== undefined) {
+      return req.query.language;
+    } else {
+      return null;
+    }
+  }
+
   if (req.query.count && req.query.count.length > 0) {
     const count = convert.toNumber(req.query.count);
-    if (checkParam(count)) {
-      return res.status(200).send({ data: facts.getMany(count) });
+    if (checkParam(count, language())) {
+      return res.status(200).send({ data: facts.getMany(count, language()) });
     } else {
       return res.status(500).send({
         error: `${count} is an invalid count, please enter a number from 1 to 96`,
@@ -76,15 +85,15 @@ app.get("/", (req, res) => {
   } else {
     if (req.query.id && req.query.id.length > 0) {
       const id = convert.toNumber(req.query.id);
-      if (checkParam(id)) {
-        return res.status(200).send({ data: [facts.getSingle(id)] });
+      if (checkParam(id, language())) {
+        return res.status(200).send({ data: [facts.getSingle(id, language())] });
       } else {
         return res.status(500).send({
           error: `${id} is an invalid id, please enter a number from 1 to 96`,
         });
       }
     } else {
-      return res.status(200).send({ data: [facts.getSingle()] });
+      return res.status(200).send({ data: [facts.getSingle(null, language())] });
     }
   }
 });
