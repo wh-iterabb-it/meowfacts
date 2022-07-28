@@ -1,21 +1,22 @@
-const english = require('./localization/en-US');
-const russian = require('./localization/ru-RU');
-const ukraine = require('./localization/uk-UA');
+const english = require("./localization/eng-US");
+const russian = require("./localization/rus-RU");
+const ukraine = require("./localization/ukr-UA");
 
+/**
+ *
+ * @param {String} langName - ISO 639-2 Code
+ * @returns {String} fact localized to the language
+ */
 function getLanguageFacts(langName) {
   switch (langName) {
-    case "english":
+    case "eng": // english ... default us
       return english.facts;
-      break;
-    case "russian":
+    case "rus": // russian
       return russian.facts;
-      break;
-    case "ukrainian":
+    case "ukr": // ukrainian
       return ukraine.facts;
-      break;
     default:
       return english.facts;
-      break;
   }
 }
 
@@ -51,4 +52,4 @@ function getMany(count, lang) {
     .map((index) => facts[index]);
 }
 
-module.exports = { getSingle, getMany, getLanguageFacts};
+module.exports = { getSingle, getMany, getLanguageFacts };

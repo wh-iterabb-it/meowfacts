@@ -98,5 +98,5 @@ const facts = [
 ];
 
 module.exports = {
-    facts: facts
-}
+  facts: facts,
+};

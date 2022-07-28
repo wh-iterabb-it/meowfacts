@@ -4,6 +4,11 @@ const helmet = require("helmet");
 const bodyParser = require("body-parser");
 const pkjson = require("../package.json");
 const facts = require("./models/facts");
+const {
+  invalidLanguageMiddleware,
+  invalidCountMiddleware,
+  invalidIDMiddleware,
+} = require("./middleware");
 
 const app = express();
 
@@ -15,20 +20,6 @@ app.use(helmet());
 
 // using bodyParser to parse json bodies into js objects
 app.use(bodyParser.json());
-
-/**
- * Check if user entered valid query parameter
- * @param {Number} param
- * @param {String} lang
- * @returns {Boolean} true if valid
- */
-function checkParam(param, lang) {
-  const safeParam = convert.toNumber(param);
-  if (safeParam <= 1 || safeParam >= facts.getLanguageFacts(lang).length) {
-    return false;
-  }
-  return true;
-}
 
 /** set up cors middleware
  * @param {Request} req - Express request object
@@ -46,6 +37,7 @@ app.use((req, res, next) => {
 });
 
 /**
+ * Sets up a log of the user
  * @param {Request} req - Express request object
  * @param {Response} res - Express response object
  * @param {Next} next - Express Next object
@@ -57,6 +49,13 @@ app.use((req, res, next) => {
   next();
 });
 
+// adding middleware to app to validate language and counts
+app.use(invalidLanguageMiddleware);
+app.use(invalidCountMiddleware);
+app.use(invalidIDMiddleware);
+
+// probably need to check the ID too...
+
 logger.info("turning on app...");
 
 /**
@@ -65,37 +64,19 @@ logger.info("turning on app...");
  */
 app.get("/", (req, res) => {
   requestsCount++;
-  const language = () => {
-    if (req.query.language !== undefined) {
-      return req.query.language;
-    } else {
-      return null;
-    }
+  const lang = req.params.lang || null;
+
+  if (req.params.count) {
+    const count = convert.toNumber(`${req.params.count}`);
+    return res.status(200).send({ data: facts.getMany(count, lang) });
   }
 
-  if (req.query.count && req.query.count.length > 0) {
-    const count = convert.toNumber(req.query.count);
-    if (checkParam(count, language())) {
-      return res.status(200).send({ data: facts.getMany(count, language()) });
-    } else {
-      return res.status(500).send({
-        error: `${count} is an invalid count, please enter a number from 1 to 96`,
-      });
-    }
-  } else {
-    if (req.query.id && req.query.id.length > 0) {
-      const id = convert.toNumber(req.query.id);
-      if (checkParam(id, language())) {
-        return res.status(200).send({ data: [facts.getSingle(id, language())] });
-      } else {
-        return res.status(500).send({
-          error: `${id} is an invalid id, please enter a number from 1 to 96`,
-        });
-      }
-    } else {
-      return res.status(200).send({ data: [facts.getSingle(null, language())] });
-    }
+  if (req.params.id) {
+    const id = convert.toNumber(`${req.params.id}`);
+    return res.status(200).send({ data: [facts.getSingle(id, lang)] });
   }
+
+  return res.status(200).send({ data: [facts.getSingle(null, lang)] });
 });
 
 /**
