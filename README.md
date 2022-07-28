@@ -14,7 +14,19 @@ meowfacts
 A simple api that returns a random fact about cats on a GET request
 
 ### Documentation
-[![](https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/assets/SW-logo-clr.png)](https://app.swaggerhub.com/apis-docs/whiterabbit8/meowfacts/1.0.0)
+
+<div align="center">
+  <p>
+    <a href="https://app.swaggerhub.com/apis-docs/wh-iterabb-it/meowfacts/1.0.0">
+      <img width="200" height="80" src="https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/assets/SW-logo-clr.png" />
+    </a>
+  </p>
+  <p>
+    <a href="https://www.programmableweb.com/api/meow-facts">
+      <img width="200" height="60" src="https://www.programmableweb.com/sites/default/files/pw-logo.png" />
+    </a>
+  </p>
+</div>
 
 
 ### Installation
