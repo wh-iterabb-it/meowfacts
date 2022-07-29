@@ -15,6 +15,7 @@ function getLanguageFacts(langName) {
       return russian.facts;
     case "ukr": // ukrainian
       return ukraine.facts;
+    case undefined: // no language specified
     default:
       return english.facts;
   }
