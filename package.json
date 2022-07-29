@@ -13,7 +13,8 @@
   "license": "GPL-3.0",
   "contributors": [
     "Beau Bouchard <https://github.com/BeauBouchard>",
-    "Mohammed <https://github.com/Mohammed785>"
+    "Mohammed <https://github.com/Mohammed785>",
+    "ShizzaHo <https://github.com/ShizzaHo>"
   ],
   "scripts": {
     "cover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && ./node_modules/.bin/codecov",
