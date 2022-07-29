@@ -23,6 +23,7 @@ function validateCount(param, lang) {
  * @returns {Boolean} True if the language is valid, false otherwise.
  */
 function validateLanguage(language) {
+  console.log(`checking ... ${language}`);
   if (VALID_LANGUAGES.indexOf(language) === -1) {
     return false;
   }
@@ -37,21 +38,20 @@ function validateLanguage(language) {
  */
 function invalidLanguageMiddleware(request, response, next) {
   if (
-    !request.params ||
-    !request.params.lang ||
-    request.params.lang.length === 0
+    request.query ||
+    request.query.lang ||
+    request.query.lang.length === 0
   ) {
-    next(); // no language specified, so continue
-  }
-
-  if (!validateLanguage(request.params.lang)) {
-    // language specified, so continue
-    response
-      .status(400)
-      .send(`Invalid language, valid languages are "eng", "ukr", "rus"`);
-    return;
+    if (!validateLanguage(request.query.lang)) {
+      // language specified, so continue
+      response
+        .status(400)
+        .send(`Invalid language, valid languages are "eng", "ukr", "rus"`);
+      return;
+    }
   }
   next();
+
 }
 
 /**
@@ -62,39 +62,36 @@ function invalidLanguageMiddleware(request, response, next) {
  */
 function invalidCountMiddleware(request, response, next) {
   if (
-    !request.params ||
-    !request.params.count ||
-    request.params.count.length === 0
+    request.query ||
+    request.query.count ||
+    request.query.count.length !== 0
   ) {
-    next(); // no count specified, so continue
-  }
-
-  if (!validateCount(request.params.count, request.params.lang)) {
-    // count specified, so continue
-    response
-      .status(400)
-      .send(
-        `Invalid count, valid counts are between 2 and ${
-          facts.getLanguageFacts(request.params.lang).length
-        }`
-      );
-    return;
+    if (!validateCount(request.query.count, request.query.lang)) {
+      response
+        .status(400)
+        .send(
+          `Invalid count, valid counts are between 2 and ${
+            facts.getLanguageFacts(request.query.lang).length
+          }`
+        );
+      return;
+    }
   }
   next();
 }
 
 function invalidIDMiddleware(request, response, next) {
-  if (!request.params || !request.params.id || request.params.id.length === 0) {
+  if (!request.query || !request.query.id || request.query.id.length === 0) {
     next(); // no id specified, so continue
   }
 
-  if (!validateCount(request.params.id, request.params.lang)) {
+  if (!validateCount(request.query.id, request.query.lang)) {
     // id specified, so continue
     response
       .status(400)
       .send(
         `Invalid ID, valid IDs are between 1 and ${
-          facts.getLanguageFacts(request.params.lang).length
+          facts.getLanguageFacts(request.query.lang).length
         }`
       );
     return;

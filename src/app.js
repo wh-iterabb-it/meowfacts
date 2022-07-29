@@ -64,15 +64,15 @@ logger.info("turning on app...");
  */
 app.get("/", (req, res) => {
   requestsCount++;
-  const lang = req.params.lang || null;
+  const lang = req.query.lang || null;
 
-  if (req.params.count) {
-    const count = convert.toNumber(`${req.params.count}`);
+  if (req.query.count) {
+    const count = convert.toNumber(`${req.query.count}`);
     return res.status(200).send({ data: facts.getMany(count, lang) });
   }
 
-  if (req.params.id) {
-    const id = convert.toNumber(`${req.params.id}`);
+  if (req.query.id) {
+    const id = convert.toNumber(`${req.query.id}`);
     return res.status(200).send({ data: [facts.getSingle(id, lang)] });
   }
 
