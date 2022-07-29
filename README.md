@@ -9,34 +9,107 @@ meowfacts
 [![codecov](https://codecov.io/gh/wh-iterabb-it/meowfacts/branch/master/graph/badge.svg)](https://codecov.io/gh/wh-iterabb-it/meowfacts)
 
 
-### Description:
+## Description:
 
 A simple api that returns a random fact about cats on a GET request
+
+### Example Usage
+
+``` 
+curl https://meowfacts.herokuapp.com/
+```
+
+Response
+
+```json
+{
+  "data": [
+    "0": 	"Mother cats teach their kittens to use the litter box."
+  ]
+}
+```
+
+
+### Advanced Usage
+
+You can request more than one fact at a time by using the GET param `count`
+
+```bash
+curl https://meowfacts.herokuapp.com/?count=3
+```
+
+Response
+
+```json
+{
+  "data": [
+    "0": 	"Mother cats teach their kittens to use the litter box.",
+    "1": "A cat can sprint at about thirty-one miles per hour.",
+    "2": "The worlds richest cat is worth $13 million after his human passed away and left her fortune to him."
+  ]
+}
+```
+
+You can request a specific fact if you know the ID / order it is buy passing the GET param `id`
+
+```bash
+curl https://meowfacts.herokuapp.com/?id=3
+```
+
+Response
+
+```json
+{
+  "data": [
+    "0": 	"Mother cats teach their kittens to use the litter box."
+  ]
+}
+```
+
+### Language Support 
+
+You can request the response in different languages by using the GET param `lang`
+
+```bash
+curl https://meowfacts.herokuapp.com/?lang=ukr
+```
+
+Response
+
+```json
+{
+  "data": [
+    "0": 	"Найбагатший у світі кіт коштує 13 мільйонів доларів після того, як його людина померла і залишила йому свій стан"
+  ]
+}
+```
 
 ### Documentation
 
 <div align="center">
   <p>
     <a href="https://app.swaggerhub.com/apis-docs/wh-iterabb-it/meowfacts/1.0.0">
-      <img width="200" height="80" src="https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/assets/SW-logo-clr.png" />
+      <img width="200" height="72" src="https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/assets/SW-logo-clr.png" />
     </a>
   </p>
   <p>
     <a href="https://www.programmableweb.com/api/meow-facts">
-      <img width="200" height="60" src="https://www.programmableweb.com/sites/default/files/pw-logo.png" />
+      <img width="200" height="52" src="https://www.programmableweb.com/sites/default/files/pw-logo.png" />
     </a>
   </p>
 </div>
 
+
+## Local Development
 
 ### Installation
 
 ```
 npm install
 ```
-### Example Usage
 
 Basic usage
+
 ```
 npm run start
 ```
