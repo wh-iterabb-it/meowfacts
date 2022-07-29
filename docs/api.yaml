@@ -1,7 +1,7 @@
 openapi: 3.0.0
 servers:
   - description: Documentation for https://meowfacts.herokuapp.com, an api for facts about cats, meow facts.
-    url: https://virtserver.swaggerhub.com/whiterabbit8/meowfacts/1.0.0
+    url: https://virtserver.swaggerhub.com/wh-iterabb-it/meowfacts/1.0.0
 info:
   description: This is a simple API to get facts, facts about cats, meow
   version: "1.0.1"
