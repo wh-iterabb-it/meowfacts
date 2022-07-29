@@ -23,7 +23,9 @@ Response
 
 ```json
 {
-
+  "data": [
+    "0": 	"Mother cats teach their kittens to use the litter box."
+  ]
 }
 ```
 
@@ -41,7 +43,9 @@ Response
 ```json
 {
   "data": [
-    "0": 	"Mother cats teach their kittens to use the litter box."
+    "0": 	"Mother cats teach their kittens to use the litter box.",
+    "1": "A cat can sprint at about thirty-one miles per hour.",
+    "2": "The worlds richest cat is worth $13 million after his human passed away and left her fortune to him."
   ]
 }
 ```
