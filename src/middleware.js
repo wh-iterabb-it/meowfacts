@@ -37,11 +37,7 @@ function validateLanguage(language) {
  * @param {NextFunction} next - Express next function
  */
 function invalidLanguageMiddleware(request, response, next) {
-  if (
-    request.query ||
-    request.query.lang ||
-    request.query.lang.length === 0
-  ) {
+  if ((request.query && request.query.lang && request.query.lang != undefined)) {
     if (!validateLanguage(request.query.lang)) {
       // language specified, so continue
       response
@@ -51,7 +47,6 @@ function invalidLanguageMiddleware(request, response, next) {
     }
   }
   next();
-
 }
 
 /**
@@ -66,12 +61,12 @@ function invalidCountMiddleware(request, response, next) {
     request.query.count ||
     request.query.count.length !== 0
   ) {
-    if (!validateCount(request.query.count, request.query.lang)) {
+    if ((request.query && request.query.count && request.query.count != undefined)) {
       response
         .status(400)
         .send(
           `Invalid count, valid counts are between 2 and ${
-            facts.getLanguageFacts(request.query.lang).length
+            facts.getLanguageFacts(request.query.count).length
           }`
         );
       return;
@@ -81,7 +76,7 @@ function invalidCountMiddleware(request, response, next) {
 }
 
 function invalidIDMiddleware(request, response, next) {
-  if (!request.query || !request.query.id || request.query.id.length === 0) {
+  if (!request.query || !request.query.id || request.query.id.length != 0) {
     next(); // no id specified, so continue
   }
 
