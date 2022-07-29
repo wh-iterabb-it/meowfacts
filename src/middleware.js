@@ -57,24 +57,18 @@ function invalidLanguageMiddleware(request, response, next) {
  */
 function invalidCountMiddleware(request, response, next) {
   if (
-    request.query ||
-    request.query.count ||
-    request.query.count.length !== 0
+    request.query &&
+    request.query.count &&
+    request.query.count != undefined
   ) {
-    if (
-      request.query &&
-      request.query.count &&
-      request.query.count != undefined
-    ) {
-      response
-        .status(400)
-        .send(
-          `Invalid count, valid counts are between 2 and ${
-            facts.getLanguageFacts(request.query.count).length
-          }`
-        );
-      return;
-    }
+    response
+      .status(400)
+      .send(
+        `Invalid count, valid counts are between 2 and ${
+          facts.getLanguageFacts(request.query.lang).length
+        }`
+      );
+    return;
   }
   next();
 }
