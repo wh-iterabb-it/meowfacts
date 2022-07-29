@@ -37,7 +37,7 @@ function validateLanguage(language) {
  * @param {NextFunction} next - Express next function
  */
 function invalidLanguageMiddleware(request, response, next) {
-  if ((request.query && request.query.lang && request.query.lang != undefined)) {
+  if (request.query && request.query.lang && request.query.lang != undefined) {
     if (!validateLanguage(request.query.lang)) {
       // language specified, so continue
       response
@@ -61,7 +61,11 @@ function invalidCountMiddleware(request, response, next) {
     request.query.count ||
     request.query.count.length !== 0
   ) {
-    if ((request.query && request.query.count && request.query.count != undefined)) {
+    if (
+      request.query &&
+      request.query.count &&
+      request.query.count != undefined
+    ) {
       response
         .status(400)
         .send(
