@@ -1,6 +1,6 @@
 {
   "name": "meowfacts",
-  "version": "0.4.1",
+  "version": "0.4.5",
   "description": "A simple API which returns facts about cats",
   "repository": {
     "type": "git",
@@ -13,7 +13,9 @@
   "license": "GPL-3.0",
   "contributors": [
     "Beau Bouchard <https://github.com/BeauBouchard>",
-    "Mohammed <https://github.com/Mohammed785>"
+    "Mohammed <https://github.com/Mohammed785>",
+    "ShizzaHo <https://github.com/ShizzaHo>",
+    "switchhalt <https://github.com/switchhalt>"
   ],
   "scripts": {
     "cover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && ./node_modules/.bin/codecov",
@@ -31,12 +33,12 @@
   "devDependencies": {
     "chai": "4.2.0",
     "codecov": "3.8.3",
-    "eslint": "8.15.0",
+    "eslint": "8.20.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-prettier": "4.2.1",
     "mocha": "10.0.0",
-    "prettier": "2.6.2",
+    "prettier": "2.7.1",
     "nyc": "15.1.0"
   }
 }
