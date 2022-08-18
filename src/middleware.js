@@ -59,7 +59,7 @@ function invalidCountMiddleware(request, response, next) {
   if (
     request.query &&
     request.query.count &&
-    request.query.count != undefined
+    request.query.count == undefined
   ) {
     response
       .status(400)
