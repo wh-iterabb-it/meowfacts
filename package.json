@@ -12,10 +12,11 @@
   "homepage": "https://github.com/wh-iterabb-it/meowfacts#readme",
   "license": "GPL-3.0",
   "contributors": [
-    "Beau Bouchard <https://github.com/BeauBouchard>",
-    "Mohammed <https://github.com/Mohammed785>",
+    "BeauBouchard <https://github.com/BeauBouchard>",
+    "Mohammed785 <https://github.com/Mohammed785>",
     "ShizzaHo <https://github.com/ShizzaHo>",
-    "switchhalt <https://github.com/switchhalt>"
+    "switchhalt <https://github.com/switchhalt>",
+    "tarzzi <https://github.com/tarzzi>"
   ],
   "scripts": {
     "cover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && ./node_modules/.bin/codecov",
