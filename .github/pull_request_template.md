@@ -24,7 +24,9 @@ Please, go through these steps before you submit a PR.
 
 IMPORTANT: Please review the [CODE_OF_CONDUCT.md](//docs/CODE_OF_CONDUCT.md) file for detailed contributing guidelines.
 
-**PLEASE REMOVE EVERTHING ABOVE THIS TEMPLATE BEFORE SUBMITTING**
+**✂️PLEASE REMOVE EVERTHING ABOVE THIS TEMPLATE BEFORE SUBMITTING✂️**
+
+-----
 
 ### Description of Changes for Review:
 
