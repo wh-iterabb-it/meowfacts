@@ -95,6 +95,9 @@ const facts = [
   "The worlds richest cat is worth $13 million after his human passed away and left her fortune to him.",
   "Your cat recognizes your voice but just acts too cool to care (probably because they are).",
   "Cats are often lactose intolerant, so stop givin them milk!",
+  "Cats can jump up to six times their length.",
+  "Cats have contributed to the extinction of 33 different species.",
+  "Cats can drink sea water in order to survive.",
 ];
 
 module.exports = {
