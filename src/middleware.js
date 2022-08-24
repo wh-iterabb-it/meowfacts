@@ -1,7 +1,9 @@
 const facts = require("./models/facts");
 const { convert } = require("sst");
 
-const VALID_LANGUAGES = ["eng", "ukr", "rus", "esp-mx", "esp-es"];
+const ISO_LANG = ["eng-us", "ukr-ua", "rus-ru", "esp-mx", "esp-es"];
+const SHORT_LANG = ["eng", "ukr", "rus", "esp"];
+const VALID_LANGUAGES = SHORT_LANG.concat(ISO_LANG);
 
 /**
  * Check if user entered valid count parameter
