@@ -84,6 +84,31 @@ Response
 }
 ```
 
+#### Supported Languages
+
+The supported languages are listed below, you can use any of the `lang Values` in the first column as a `lang` param. 
+
+"?lang=esp" and "?lang=esp-mx" will both return spanish for your response, and simply using the `ISO-639-1` code will default to esp-mx for simplicity. 
+
+| LANG Variable | [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) | Language Name | Localization (country) |
+| :---: | :---: | :---: | :---: |
+| `eng-us`  | `eng` | English | USA |
+| `ukr-ua`  | `ukr` | Ukrainian | UA |
+| `rus-ru`  | `rus` | Russian | RUS |
+| `esp-es`  | `esp` | Spanish | ES |
+| `esp-mx`  | `esp` | Spanish (default) | MX |
+
+
+<details>
+  <summary>Help us expand and improve Internationalization on this API  (Click to expand)</summary>
+  <h3>Help us expand and improve Internationalization on this API</h3>
+  
+  <p><b>Note:</b> We are trying to follow the browser's language tags, which are formally defined in <a href="https://datatracker.ietf.org/doc/html/rfc5646">RFC 5646</a>, which rely on the <a href="https://en.wikipedia.org/wiki/ISO_639">ISO 639</a> standard (quite often the <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">639-1 code list</a>) for <a href="https://en.wikipedia.org/wiki/Language_code">language codes</a> to be used.</p> 
+
+<p>We would love it if you helped this project by taking a look at our <a href="https://github.com/wh-iterabb-it/meowfacts/issues/175">Call for Contributors</a> to see if you can make a contribution that helps us be more inclusive and support more languages. </p>
+</details>
+
+
 ### Documentation
 
 <div align="center">
