@@ -11,16 +11,20 @@ const spanishSpain = require("./localization/esp-ES");
  */
 function getLanguageFacts(langName) {
   switch (langName) {
-    case "eng": // english ... default us
+    case "eng-us": // english
+    case "eng": // default english
       return english.facts;
-    case "rus": // russian
+    case "rus-ru": // russian
+    case "rus": // default russian
       return russian.facts;
-    case "ukr": // ukrainian
+    case "ukr-ua": // ukrainian
+    case "ukr": // default ukrainian
       return ukraine.facts;
-    case "esp-mx": // spanish Mexico
-      return spanishMexico.facts;
     case "esp-es": // spanish Spain
       return spanishSpain.facts;
+    case "esp-mx": // spanish Mexico
+    case "esp": // default spanish
+      return spanishMexico.facts;
     case undefined: // no language specified
     default:
       return english.facts;
