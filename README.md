@@ -97,7 +97,7 @@ The supported languages are listed below, you can use any of the `lang Values` i
 | `rus-ru`  | `rus` | Russian | RUS |
 | `esp-es`  | `esp` | Spanish | ES |
 | `esp-mx`  | `esp` | Spanish (default) | MX |
-| `ces-cz`  | `ces` | Czech | CZ |
+| `ces-cz` or `cze-cz` | `cze` (B) `ces` (T) | Czech | CZ |
 
 
 <details>
