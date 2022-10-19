@@ -44,7 +44,7 @@ app.use((req, res, next) => {
  */
 app.use((req, res, next) => {
   const user =
-    req.headers["x-forwarded-for"] || req.connection.remoteAddress || req.ip;
+    req.headers["x-forwarded-for"] || req.socket.remoteAddress || req.ip;
   logger.info(`request from ${user}`);
   next();
 });
