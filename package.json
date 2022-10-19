@@ -17,7 +17,8 @@
     "ShizzaHo <https://github.com/ShizzaHo>",
     "switchhalt <https://github.com/switchhalt>",
     "tarzzi <https://github.com/tarzzi>",
-    "amiarham <https://github.com/amiarham>"
+    "amiarham <https://github.com/amiarham>",
+    "robvanbakel <https://github.com/robvanbakel>",
   ],
   "scripts": {
     "cover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && ./node_modules/.bin/codecov",
