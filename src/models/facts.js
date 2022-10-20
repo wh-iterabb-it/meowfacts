@@ -1,6 +1,7 @@
 const english = require("./localization/eng-US");
 const russian = require("./localization/rus-RU");
 const ukraine = require("./localization/ukr-UA");
+const german = require("./localization/de-DE");
 const spanishMexico = require("./localization/esp-MX");
 const spanishSpain = require("./localization/esp-ES");
 
@@ -25,6 +26,9 @@ function getLanguageFacts(langName) {
     case "esp-mx": // spanish Mexico
     case "esp": // default spanish
       return spanishMexico.facts;
+    case "de-de": // german Germany
+    case "ger": // default german
+      return german.facts;
     case undefined: // no language specified
     default:
       return english.facts;
