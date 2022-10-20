@@ -44,7 +44,9 @@ function invalidLanguageMiddleware(request, response, next) {
       // language specified, so continue
       response
         .status(400)
-        .send(`Invalid language, valid languages are "eng", "ukr", "rus", "ger"`);
+        .send(
+          `Invalid language, valid languages are "eng", "ukr", "rus", "ger"`
+        );
       return;
     }
   }
@@ -66,7 +68,8 @@ function invalidCountMiddleware(request, response, next) {
     response
       .status(400)
       .send(
-        `Invalid count, valid counts are between 2 and ${facts.getLanguageFacts(request.query.lang).length
+        `Invalid count, valid counts are between 2 and ${
+          facts.getLanguageFacts(request.query.lang).length
         }`
       );
     return;
@@ -84,7 +87,8 @@ function invalidIDMiddleware(request, response, next) {
     response
       .status(400)
       .send(
-        `Invalid ID, valid IDs are between 1 and ${facts.getLanguageFacts(request.query.lang).length
+        `Invalid ID, valid IDs are between 1 and ${
+          facts.getLanguageFacts(request.query.lang).length
         }`
       );
     return;
