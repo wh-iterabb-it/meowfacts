@@ -19,7 +19,8 @@
     "tarzzi <https://github.com/tarzzi>",
     "amiarham <https://github.com/amiarham>",
     "robvanbakel <https://github.com/robvanbakel>",
-    "Ifmycodecouldtalk  <https://github.com/Ifmycodecouldtalk>"
+    "Ifmycodecouldtalk <https://github.com/Ifmycodecouldtalk>",
+    "nickcrisci <https://github.com/nickcrisci>"
   ],
   "scripts": {
     "cover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && ./node_modules/.bin/codecov",
