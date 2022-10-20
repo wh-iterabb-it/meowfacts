@@ -93,6 +93,7 @@ The supported languages are listed below, you can use any of the `lang Values` i
 | LANG Variable | [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) | Language Name | Localization (country) |
 | :---: | :---: | :---: | :---: |
 | `eng-us`  | `eng` | English | USA |
+| `ger-de`  | `ger` | German | DE |
 | `ukr-ua`  | `ukr` | Ukrainian | UA |
 | `rus-ru`  | `rus` | Russian | RUS |
 | `esp-es`  | `esp` | Spanish | ES |
