@@ -74,7 +74,8 @@ function invalidCountMiddleware(request, response, next) {
     response
       .status(400)
       .send(
-        `Invalid count, valid counts are between 2 and ${facts.getLanguageFacts(request.query.lang).length
+        `Invalid count, valid counts are between 2 and ${
+          facts.getLanguageFacts(request.query.lang).length
         }`
       );
     return;
@@ -92,7 +93,8 @@ function invalidIDMiddleware(request, response, next) {
     response
       .status(400)
       .send(
-        `Invalid ID, valid IDs are between 1 and ${facts.getLanguageFacts(request.query.lang).length
+        `Invalid ID, valid IDs are between 1 and ${
+          facts.getLanguageFacts(request.query.lang).length
         }`
       );
     return;
