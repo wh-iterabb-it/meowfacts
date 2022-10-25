@@ -92,5 +92,8 @@ const facts = [
 ];
 
 module.exports = {
+  languageName: "english",
+  ISO_LANG: "eng-us",
+  SHORT_LANG: "eng",
   facts: facts,
 };

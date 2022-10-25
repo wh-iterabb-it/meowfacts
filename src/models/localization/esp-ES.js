@@ -3,5 +3,8 @@ const facts = [
 ];
 
 module.exports = {
+  languageName: "spanish",
+  ISO_LANG: "esp-es",
+  SHORT_LANG: "esp",
   facts: facts,
 };

@@ -7,5 +7,8 @@ const facts = [
 ];
 
 module.exports = {
+  languageName: "mexican-spanish",
+  ISO_LANG: "esp-mx",
+  SHORT_LANG: "esp",
   facts: facts,
 };
