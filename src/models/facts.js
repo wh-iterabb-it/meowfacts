@@ -1,4 +1,6 @@
-const localization = require("./localization");
+const requireDir = require("require-dir");
+
+const localization = requireDir("./localization");
 
 /**
  *

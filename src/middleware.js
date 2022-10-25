@@ -1,7 +1,9 @@
 const facts = require("./models/facts");
 const { convert } = require("sst");
+const requireDir = require("require-dir");
 
-const localization = require("./models/localization");
+const localization = requireDir("./models/localization");
+
 let ISO_LANG = [];
 let SHORT_LANG = [];
 
