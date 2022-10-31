@@ -1,3 +1,5 @@
+// ISO 639-2/T (ces)
+
 const facts = [
   "V roce 1987 se v Americe staly kočky domácím mazlíčkem a překonaly tak psy.",
   "Kočky, které žijí společně, se občas otírají hlavami aby ukázaly že nemají v plánu bojovat. Častěji to dělají mladé kočky, zvlášť když jsou vzrušené.",
@@ -88,6 +90,17 @@ const facts = [
   "Kočky v přírodě mohou pít mořskou vodu.",
 ];
 
+const langName = "Czech",
+  langISO = "ces",// ISO 639-2/T (ces) Čeština 
+  langLocale = "cz",
+  langLocaleName = "Czech"; 
+
 module.exports = {
+  langName,
+  langISO,
+  langLocale,
+  langLocaleName,
+  code: `${langISO}-${langLocale}`,
+  codeName: `${langName} (${langLocaleName})`,
   facts: facts,
 };
