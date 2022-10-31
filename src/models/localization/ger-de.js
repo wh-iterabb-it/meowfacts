@@ -100,7 +100,7 @@ const facts = [
   "Katzen können Meerwasser trinken, um zu überleben.",
 ];
 const langName = "german",
-  langISO = "deu",
+  langISO = "ger",
   langLocale = "de",
   langLocaleName = "germany";
 
