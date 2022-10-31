@@ -25,7 +25,7 @@ function getLanguageFacts(requestedLang) {
  * @param {String} lang
  * @returns {String} - a single fact about cats
  **/
-function getSingle(ID = null, lang) {
+function getSingle(ID = null, lang = "eng-us") {
   const facts = getLanguageFacts(lang);
   if (ID) {
     const id = ID - 1;

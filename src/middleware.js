@@ -1,6 +1,7 @@
 const facts = require("./models/facts");
 const { convert } = require("sst");
 const localization = require("./models/localization");
+console.log(localization);
 
 let fullCode = [];
 let shortISO = [];
