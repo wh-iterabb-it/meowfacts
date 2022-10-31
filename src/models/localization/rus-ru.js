@@ -91,6 +91,17 @@ const facts = [
   "Кошки могут пить морскую воду, чтобы выжить.",
 ];
 
+const langName = "russian",
+  langISO = "rus",
+  langLocale = "ru",
+  langLocaleName = "russia";
+
 module.exports = {
+  langName,
+  langISO,
+  langLocale,
+  langLocaleName,
+  code: `${langISO}-${langLocale}`,
+  codeName: `${langName} (${langLocaleName})`,
   facts: facts,
 };

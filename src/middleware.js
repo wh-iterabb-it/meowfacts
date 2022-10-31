@@ -1,9 +1,18 @@
 const facts = require("./models/facts");
 const { convert } = require("sst");
+const localization = require("./models/localization");
+console.log(localization);
 
-const ISO_LANG = ["eng-us", "ukr-ua", "rus-ru", "esp-mx", "esp-es", "de-de"];
-const SHORT_LANG = ["eng", "ukr", "rus", "esp", "ger"];
-const VALID_LANGUAGES = SHORT_LANG.concat(ISO_LANG);
+let fullCode = [];
+let shortISO = [];
+
+// Dynamically fill the fullCode and shortISO list with the provided config information in the language files
+for (const language in localization) {
+  fullCode.push(localization[language].code);
+  shortISO.push(localization[language].langISO);
+}
+
+const VALID_LANGUAGES = shortISO.concat(fullCode);
 
 /**
  * Check if user entered valid count parameter
@@ -44,9 +53,7 @@ function invalidLanguageMiddleware(request, response, next) {
       // language specified, so continue
       response
         .status(400)
-        .send(
-          `Invalid language, valid languages are "eng", "ukr", "rus", "ger"`
-        );
+        .send(`Invalid language, valid languages are ${shortISO.join(", ")}`);
       return;
     }
   }

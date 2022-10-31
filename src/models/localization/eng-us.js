@@ -91,6 +91,17 @@ const facts = [
   "Cats can drink sea water in order to survive.",
 ];
 
+const langName = "english",
+  langISO = "eng",
+  langLocale = "us",
+  langLocaleName = "United States";
+
 module.exports = {
+  langName,
+  langISO,
+  langLocale,
+  langLocaleName,
+  code: `${langISO}-${langLocale}`,
+  codeName: `${langName} (${langLocaleName})`,
   facts: facts,
 };

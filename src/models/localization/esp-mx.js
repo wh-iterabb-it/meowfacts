@@ -6,6 +6,17 @@ const facts = [
   "¡Tienes que ser gatito me! ¿Estás seguro de que quieres darte de baja? envía SÍ o NO",
 ];
 
+const langName = "spanish",
+  langISO = "esp",
+  langLocale = "mx",
+  langLocaleName = "mexican";
+
 module.exports = {
+  langName,
+  langISO,
+  langLocale,
+  langLocaleName,
+  code: `${langISO}-${langLocale}`,
+  codeName: `${langName} (${langLocaleName})`,
   facts: facts,
 };
