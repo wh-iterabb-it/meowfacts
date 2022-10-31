@@ -91,9 +91,9 @@ const facts = [
 ];
 
 const langName = "Czech",
-  langISO = "ces",// ISO 639-2/T (ces) Čeština 
+  langISO = "ces", // ISO 639-2/T (ces) Čeština
   langLocale = "cz",
-  langLocaleName = "Czech"; 
+  langLocaleName = "Czech";
 
 module.exports = {
   langName,
