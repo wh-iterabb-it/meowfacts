@@ -28,7 +28,7 @@ describe("Main", () => {
           expect(actualThree).to.be.equal(expectedThree);
         });
       });
-      describe("getMany", () => {
+      describe("ENG - getMany", () => {
         it("it should return an array of 3 facts of random", () => {
           const actual = facts.getMany(3);
           expect(actual).to.be.a("array");
@@ -58,7 +58,7 @@ describe("Main", () => {
           expect(actualThree).to.be.equal(expectedThree);
         });
       });
-      describe("getMany", () => {
+      describe("UKR - getMany", () => {
         it("it should return an array of 3 facts of random", () => {
           const actual = facts.getMany(3, "ukr");
           const allFacts = facts.getLanguageFacts("ukr");
@@ -67,6 +67,46 @@ describe("Main", () => {
           expect(actual.length).to.be.equal(3);
           expect(allFacts).to.deep.include(actual[0]);
 
+        });
+      });
+    });
+    describe("ESP-ES - Spanish - Spain Localization", () => {
+      describe("getSingle", () => {
+        it("it should return a single fact of random", () => {
+          const actual = facts.getSingle(null, "esp-es");
+          expect(actual).to.be.a("string");
+        });
+        it("it should return the single fact of ID 1", () => {
+          const actualOne = facts.getSingle(1, "esp-es");
+          const expectedOne =
+					"En 1987, los gatos superaron a los perros como la mascota número uno en Estados Unidos.";
+          expect(actualOne).to.be.a("string");
+          expect(actualOne).to.be.equal(expectedOne);
+        });
+      });
+    });
+    describe("ESP-MX - Spanish - Mexico Localization", () => {
+      describe("getSingle", () => {
+        it("it should return a single fact of random", () => {
+          const actual = facts.getSingle(null, "esp-mx");
+          expect(actual).to.be.a("string");
+        });
+        it("it should return the single fact of ID 1", () => {
+          const actualOne = facts.getSingle(1, "esp-mx");
+          const expectedOne =
+					"En 1987, los gatos superaron a los perros como la mascota número uno en Estados Unidos.";
+          expect(actualOne).to.be.a("string");
+          expect(actualOne).to.be.equal(expectedOne);
+        });
+      });
+      describe("getMany", () => {
+        it("it should return an array of 3 facts of random", () => {
+          const actual = facts.getMany(3, "esp-mx");
+          const allFacts = facts.getLanguageFacts("esp-mx");
+          expect(actual).to.be.a("array");
+          expect(actual[0]).to.be.a("string");
+          expect(actual.length).to.be.equal(3);
+          expect(allFacts).to.deep.include(actual[0]);
         });
       });
     });
