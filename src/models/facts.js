@@ -1,9 +1,6 @@
-const english = require("./localization/eng-US");
-const russian = require("./localization/rus-RU");
-const ukraine = require("./localization/ukr-UA");
-const german = require("./localization/de-DE");
-const spanishMexico = require("./localization/esp-MX");
-const spanishSpain = require("./localization/esp-ES");
+const requireDir = require("require-dir");
+
+const localization = requireDir("./localization");
 
 /**
  *
@@ -11,28 +8,16 @@ const spanishSpain = require("./localization/esp-ES");
  * @returns {String} fact localized to the language
  */
 function getLanguageFacts(langName) {
-  switch (langName) {
-    case "eng-us": // english
-    case "eng": // default english
-      return english.facts;
-    case "rus-ru": // russian
-    case "rus": // default russian
-      return russian.facts;
-    case "ukr-ua": // ukrainian
-    case "ukr": // default ukrainian
-      return ukraine.facts;
-    case "esp-es": // spanish Spain
-      return spanishSpain.facts;
-    case "esp-mx": // spanish Mexico
-    case "esp": // default spanish
-      return spanishMexico.facts;
-    case "de-de": // german Germany
-    case "ger": // default german
-      return german.facts;
-    case undefined: // no language specified
-    default:
-      return english.facts;
+  for (const language in localization) {
+    if (
+      localization[language].ISO_LANG === langName ||
+      localization[language].SHORT_LANG === langName
+    ) {
+      return localization[language].facts;
+    }
   }
+
+  return localization["eng-US"].facts;
 }
 
 /**

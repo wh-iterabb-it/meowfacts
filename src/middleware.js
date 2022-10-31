@@ -1,8 +1,18 @@
 const facts = require("./models/facts");
 const { convert } = require("sst");
+const requireDir = require("require-dir");
 
-const ISO_LANG = ["eng-us", "ukr-ua", "rus-ru", "esp-mx", "esp-es", "de-de"];
-const SHORT_LANG = ["eng", "ukr", "rus", "esp", "ger"];
+const localization = requireDir("./models/localization");
+
+let ISO_LANG = [];
+let SHORT_LANG = [];
+
+// Dynamically fill the ISO_LANG and SHORT_LANG list with the provided config information in the language files
+for (const language in localization) {
+  ISO_LANG.push(localization[language].ISO_LANG);
+  SHORT_LANG.push(localization[language].SHORT_LANG);
+}
+
 const VALID_LANGUAGES = SHORT_LANG.concat(ISO_LANG);
 
 /**
@@ -44,9 +54,7 @@ function invalidLanguageMiddleware(request, response, next) {
       // language specified, so continue
       response
         .status(400)
-        .send(
-          `Invalid language, valid languages are "eng", "ukr", "rus", "ger"`
-        );
+        .send(`Invalid language, valid languages are ${SHORT_LANG.join(", ")}`);
       return;
     }
   }

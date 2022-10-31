@@ -92,5 +92,8 @@ const facts = [
 ];
 
 module.exports = {
+  languageName: "russian",
+  ISO_LANG: "rus-ru",
+  SHORT_LANG: "rus",
   facts: facts,
 };
