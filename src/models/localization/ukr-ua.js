@@ -91,9 +91,17 @@ const facts = [
   "Кішки можуть пити морську воду, щоб вижити.",
 ];
 
+const langName = "ukrainian",
+  langISO = "ukr",
+  langLocale = "ua",
+  langLocaleName = "ukrainian";
+
 module.exports = {
-  languageName: "ukrainian",
-  ISO_LANG: "ukr-ua",
-  SHORT_LANG: "ukr",
+  langName,
+  langISO,
+  langLocale,
+  langLocaleName,
+  code: `${langISO}-${langLocale}`,
+  codeName: `${langName} (${langLocaleName})`,
   facts: facts,
 };

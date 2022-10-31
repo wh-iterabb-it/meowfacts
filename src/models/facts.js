@@ -1,23 +1,21 @@
-const requireDir = require("require-dir");
-
-const localization = requireDir("./localization");
+const localization = require("./localization");
 
 /**
  *
- * @param {String} langName - ISO 639-2 Code
+ * @param {String} requestedLang - ISO 639-2 Code
  * @returns {String} fact localized to the language
  */
-function getLanguageFacts(langName) {
+function getLanguageFacts(requestedLang) {
   for (const language in localization) {
     if (
-      localization[language].ISO_LANG === langName ||
-      localization[language].SHORT_LANG === langName
+      localization[language].code === requestedLang ||
+      localization[language].langISO === requestedLang
     ) {
       return localization[language].facts;
     }
   }
 
-  return localization["eng-US"].facts;
+  return localization["eng-us"].facts;
 }
 
 /**

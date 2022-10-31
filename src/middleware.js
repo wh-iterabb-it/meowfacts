@@ -1,19 +1,17 @@
 const facts = require("./models/facts");
 const { convert } = require("sst");
-const requireDir = require("require-dir");
+const localization = require("./models/localization");
 
-const localization = requireDir("./models/localization");
+let fullCode = [];
+let shortISO = [];
 
-let ISO_LANG = [];
-let SHORT_LANG = [];
-
-// Dynamically fill the ISO_LANG and SHORT_LANG list with the provided config information in the language files
+// Dynamically fill the fullCode and shortISO list with the provided config information in the language files
 for (const language in localization) {
-  ISO_LANG.push(localization[language].ISO_LANG);
-  SHORT_LANG.push(localization[language].SHORT_LANG);
+  fullCode.push(localization[language].code);
+  shortISO.push(localization[language].langISO);
 }
 
-const VALID_LANGUAGES = SHORT_LANG.concat(ISO_LANG);
+const VALID_LANGUAGES = shortISO.concat(fullCode);
 
 /**
  * Check if user entered valid count parameter
@@ -54,7 +52,7 @@ function invalidLanguageMiddleware(request, response, next) {
       // language specified, so continue
       response
         .status(400)
-        .send(`Invalid language, valid languages are ${SHORT_LANG.join(", ")}`);
+        .send(`Invalid language, valid languages are ${shortISO.join(", ")}`);
       return;
     }
   }

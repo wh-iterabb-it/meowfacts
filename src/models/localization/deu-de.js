@@ -99,10 +99,17 @@ const facts = [
   "Katzen haben zum Aussterben von 33 verschiedenen Arten beigetragen.",
   "Katzen können Meerwasser trinken, um zu überleben.",
 ];
+const langName = "german",
+  langISO = "deu",
+  langLocale = "de",
+  langLocaleName = "germany";
 
 module.exports = {
-  languageName: "german",
-  ISO_LANG: "de-de",
-  SHORT_LANG: "ger",
+  langName,
+  langISO,
+  langLocale,
+  langLocaleName,
+  code: `${langISO}-${langLocale}`,
+  codeName: `${langName} (${langLocaleName})`,
   facts: facts,
 };
