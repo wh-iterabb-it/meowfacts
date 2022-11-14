@@ -1,7 +1,6 @@
 const facts = require("./models/facts");
 const { convert } = require("sst");
 const localization = require("./models/localization");
-console.log(localization);
 
 let fullCode = [];
 let shortISO = [];
@@ -53,7 +52,9 @@ function invalidLanguageMiddleware(request, response, next) {
       // language specified, so continue
       response
         .status(400)
-        .send(`Invalid language, valid languages are ${shortISO.join(", ")}`);
+        .send(
+          `Invalid language, valid languages are ${VALID_LANGUAGES.join(", ")}`
+        );
       return;
     }
   }
