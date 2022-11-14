@@ -3,7 +3,7 @@ servers:
   - description: Documentation for https://meowfacts.herokuapp.com, an api for facts about cats, meow facts.
     url: https://virtserver.swaggerhub.com/wh-iterabb-it/meowfacts/1.0.0
 info:
-  description: This is a simple API to get facts, facts about cats, meow
+  description: This is a simple API to get facts, facts about cats, meow. You can send a simple RESTful request to this enpoint and retrieve a cat fact in different languages.
   version: "1.0.1"
   title: MEOW
   contact:
@@ -37,6 +37,16 @@ paths:
             type: integer
             format: int32
             minimum: 1
+        - in: query
+          name: lang
+          description: requested locale to retrieve the cat fact in. 
+          required: false
+          schema:
+            type: string
+            enum:
+              - "eng"
+              - "ukr"
+              - "rus"
       responses:
         '200':
           description: You just got some meowfacts
@@ -48,6 +58,20 @@ paths:
                   $ref: '#/components/schemas/fact'
         '400':
           description: bad input parameter
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/error'
+        '404':
+          description: fact not found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/error'
 components:
   schemas:
     fact:
@@ -58,3 +82,17 @@ components:
           items:
             type: string
             example: "In ancient Egypt, killing a cat was a crime punishable by death."
+    error: 
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+          example: 400
+        message:
+          type: string
+          example: "Invalid language, valid languages are 'eng', 'ukr', 'rus'"
+        type:
+          type: string
+          example: "Bad Request"
+    
