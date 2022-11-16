@@ -91,7 +91,7 @@ components:
           example: 400
         message:
           type: string
-          example: "Invalid language, valid languages are 'eng', 'ukr', 'rus'"
+          example: "Invalid language, valid languages are 'ces', 'eng', 'esp', 'ger', 'rus', 'ukr', 'ces-cz', 'eng-us', 'esp-es', 'esp-mx', 'ger-de', 'rus-ru', 'ukr-au'"
         type:
           type: string
           example: "Bad Request"
