@@ -1,8 +1,11 @@
 const path = require("path");
 const fs = require("fs");
 
+const defaultLanguages = require("./defaultLanguages");
+
 const localizations = {};
 const basename = path.basename(module.filename);
+const defaultLanguagesName = "defaultLanguages.js";
 
 // Do a barrel export
 // Barrelling all the localization files into a single object
@@ -12,7 +15,10 @@ const basename = path.basename(module.filename);
 fs.readdirSync(__dirname)
   .filter(
     (file) =>
-      file.indexOf(".") !== 0 && file !== basename && file.slice(-3) === ".js"
+      file.indexOf(".") !== 0 &&
+      file !== basename &&
+      file !== defaultLanguagesName &&
+      file.slice(-3) === ".js"
   )
   .forEach((file) => {
     localizations[
@@ -20,4 +26,4 @@ fs.readdirSync(__dirname)
     ] = require(path.join(__dirname, file));
   });
 
-module.exports = localizations;
+module.exports = { localizations, defaultLanguages };
