@@ -53,7 +53,7 @@ function getMany(count, lang) {
 /**
  * getLanguageFacts
  * @description A simple function to return array of language objects
- * @returns {Array[Object]} array of language obhects returned
+ * @returns {Array[Object]} array of language objects returned
  **/
 
 function getLanguages() {
