@@ -83,6 +83,14 @@ app.get("/", (req, res) => {
  * @param {Request} req - Express request object
  * @param {Response} res - Express response object
  */
+app.get("/options", (req, res) => {
+  res.status(200).send({ lang: facts.getLanguages() });
+});
+
+/**
+ * @param {Request} req - Express request object
+ * @param {Response} res - Express response object
+ */
 app.get("/health", (req, res) => {
   requestsCount++;
   const time = process.uptime();
