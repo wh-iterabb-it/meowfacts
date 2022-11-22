@@ -52,10 +52,8 @@ function getMany(count, lang) {
 
 /**
  * getLanguageFacts
- * @description A simple function to return multiple random catfacts
- * @param {Number} count is a required param the number of catfacts to return in an array
- * @param {String} lang
- * @returns {Array[String]} many facts returned
+ * @description A simple function to return array of language objects
+ * @returns {Array[Object]} array of language obhects returned
  **/
 
 function getLanguages() {
