@@ -22,7 +22,8 @@
     "sinus-x <https://github.com/sinus-x>",
     "Ifmycodecouldtalk <https://github.com/Ifmycodecouldtalk>",
     "nickcrisci <https://github.com/nickcrisci>",
-    "furkanmutlu <https://github.com/furkanmutlu>"
+    "furkanmutlu <https://github.com/furkanmutlu>",
+    "Mattazz <https://github.com/mattazz>"
   ],
   "scripts": {
     "cover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && ./node_modules/.bin/codecov",
