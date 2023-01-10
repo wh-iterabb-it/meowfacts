@@ -96,6 +96,7 @@ The supported languages are listed below, you can use any of the `lang Values` i
 | `ger-de`  | `ger` | German | DE |
 | `ukr-ua`  | `ukr` | Ukrainian | UA |
 | `rus-ru`  | `rus` | Russian | RUS |
+| `por-br`  | `por` | Portuguese | BR |
 | `esp-es`  | `esp` | Spanish | ES |
 | `esp-mx`  | `esp` | Spanish (default) | MX |
 | `ces-cz` or `cze-cz` | `cze` (B) `ces` (T) | Czech | CZ |
