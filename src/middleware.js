@@ -1,14 +1,14 @@
 const facts = require("./models/facts");
 const { convert } = require("sst");
-const localization = require("./models/localization");
+const { localizations } = require("./models/localizations");
 
 let fullCode = [];
 let shortISO = [];
 
 // Dynamically fill the fullCode and shortISO list with the provided config information in the language files
-for (const language in localization) {
-  fullCode.push(localization[language].code);
-  shortISO.push(localization[language].langISO);
+for (const language in localizations) {
+  fullCode.push(localizations[language].code);
+  shortISO.push(localizations[language].langISO);
 }
 
 const VALID_LANGUAGES = shortISO.concat(fullCode);

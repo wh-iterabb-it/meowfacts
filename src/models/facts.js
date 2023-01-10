@@ -1,4 +1,4 @@
-const localization = require("./localization");
+const { localizations, defaultLanguages } = require("./localizations");
 
 /**
  *
@@ -6,16 +6,20 @@ const localization = require("./localization");
  * @returns {String} fact localized to the language
  */
 function getLanguageFacts(requestedLang) {
-  for (const language in localization) {
+  if (requestedLang in defaultLanguages) {
+    return defaultLanguages[requestedLang].facts;
+  }
+
+  for (const language in localizations) {
     if (
-      localization[language].code === requestedLang ||
-      localization[language].langISO === requestedLang
+      localizations[language].code === requestedLang ||
+      localizations[language].langISO === requestedLang
     ) {
-      return localization[language].facts;
+      return localizations[language].facts;
     }
   }
 
-  return localization["eng-us"].facts;
+  return localizations["eng-us"].facts;
 }
 
 /**
