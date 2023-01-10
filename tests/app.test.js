@@ -21,6 +21,18 @@ describe("Main", () => {
     });
   });
 
+  describe("/GET options", () => {
+    it("it should have successful GET", (done) => {
+      chai
+        .request(app)
+        .get("/options")
+        .end((err, res) => {
+          res.should.have.status(200);
+          done();
+        });
+    });
+  });
+
   describe("/GET health", () => {
     it("it should have successful GET", (done) => {
       chai

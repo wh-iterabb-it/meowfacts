@@ -14,7 +14,8 @@ for (const language in localizations) {
 const VALID_LANGUAGES = shortISO.concat(fullCode);
 
 /**
- * Check if user entered valid count parameter
+ * validateCount
+ * @description Check if user entered valid count parameter
  * @param {Number} param
  * @param {String} lang
  * @returns {Boolean} true if valid
@@ -28,7 +29,8 @@ function validateCount(param, lang) {
 }
 
 /**
- * a middleware for validating the language parameter.
+ * validateLanguage
+ * @description a middleware for validating the language parameter.
  * @param language {String} The language to validate.
  * @returns {Boolean} True if the language is valid, false otherwise.
  */
@@ -41,7 +43,7 @@ function validateLanguage(language) {
 }
 
 /**
- *
+ * invalidLanguageMiddleware
  * @param {Request} request - Express request object
  * @param {Response} response - Express response object
  * @param {NextFunction} next - Express next function
@@ -62,7 +64,8 @@ function invalidLanguageMiddleware(request, response, next) {
 }
 
 /**
- *
+ * invalidCountMiddleware
+ * @description check if the item count is correctly between the min and max (per the requested local's if one is set)
  * @param {Request} request - Express request object
  * @param {Response} response - Express response object
  * @param {NextFunction} next - Express next function
