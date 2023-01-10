@@ -60,7 +60,7 @@ function getMany(count, lang) {
  * @returns {Array[Object]} array of language objects returned
  **/
 function getLanguages() {
-  return Object.values(localization).reduce((carry, language) => {
+  return Object.values(localizations).reduce((carry, language) => {
     const {
       langLocale,
       langISO,
