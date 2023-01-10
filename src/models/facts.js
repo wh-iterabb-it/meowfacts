@@ -1,7 +1,7 @@
 const localization = require("./localization");
 
 /**
- *
+ * getLanguageFacts
  * @param {String} requestedLang - ISO 639-2 Code
  * @returns {String} fact localized to the language
  */
@@ -51,11 +51,10 @@ function getMany(count, lang) {
 }
 
 /**
- * getLanguageFacts
+ * getLanguages
  * @description A simple function to return array of language objects
  * @returns {Array[Object]} array of language objects returned
  **/
-
 function getLanguages() {
   return Object.values(localization).reduce((carry, language) => {
     const {
