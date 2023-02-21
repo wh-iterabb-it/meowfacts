@@ -1,5 +1,5 @@
 const facts = [
-  "En 1987 los gatos superaron a los perros como la mascota número uno en Estados Unidos.",
+  "En 1987, los gatos superaron a los perros como la mascota número uno en Estados Unidos.",
   "Los gatos que viven juntos a veces se frotan la cabeza para demostrar que no tienen intención de pelearse. Los gatos jóvenes lo hacen más a menudo, sobre todo cuando están excitados.",
   "Las gatas madre enseñan a sus gatitos a usar la caja de arena.",
   "La forma de tratar a los gatitos en las primeras etapas de su vida determinará sus rasgos de personalidad más adelante.",
