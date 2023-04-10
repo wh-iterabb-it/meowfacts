@@ -38,7 +38,7 @@
   "dependencies": {
     "chai-http": "4.3.0",
     "express": "4.18.2",
-    "helmet": "6.0.1",
+    "helmet": "6.1.3",
     "sst": "git+https://github.com/wh-iterabb-it/sst.git"
   },
   "devDependencies": {
