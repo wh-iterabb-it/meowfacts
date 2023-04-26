@@ -91,15 +91,16 @@ The supported languages are listed below, you can use any of the `lang Values` i
 | LANG Variable | [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) | Language Name | Localization (country) |
 | :---: | :---: | :---: | :---: |
 | `eng-us`  | `eng` | English | USA |
+| `ces-cz` or `cze-cz` | `cze` (B) `ces` (T) | Czech | CZ |
 | `ger-de`  | `ger` | German | DE |
-| `ukr-ua`  | `ukr` | Ukrainian | UA |
-| `rus-ru`  | `rus` | Russian | RUS |
-| `por-br`  | `por` | Portuguese | BR |
 | `esp-es`  | `esp` | Spanish | ES |
 | `esp-mx`  | `esp` | Spanish (default) | MX |
-| `ces-cz` or `cze-cz` | `cze` (B) `ces` (T) | Czech | CZ |
+| `rus-ru`  | `rus` | Russian | RUS |
+| `por-br`  | `por` | Portuguese | BR |
 | `tl-fil`  | `fil` | Filipino | PH |
+| `ukr-ua`  | `ukr` | Ukrainian | UA |
 | `urd-ur`  | `urd` | Urdu | UR |
+| `zho-tw` | `zho` | Chinese | TW (Taiwan) |
 
 
 <details>
