@@ -10,7 +10,7 @@ const facts = [
   "Cats can not taste sweets.",
   "Cats must have fat in their diet because they cannot produce it on their own.",
   "Some common houseplants poisonous to cats include: English Ivy, iris, mistletoe, philodendron, and yew.",
-  "Tylenol and chocolate are both poisionous to cats.",
+  "Tylenol and chocolate are both poisonous to cats.",
   "Many cats cannot properly digest cows milk. Milk and milk products give them diarrhea.",
   "The average cat food meal is the equivalent to about five mice.",
   "Cats can get tapeworms from eating fleas. These worms live inside the cat forever, or until they are removed with medication. They reproduce by shedding a link from the end of their long bodies. This link crawls out the cat's anus, and sheds hundreds of eggs. These eggs are injested by flea larvae, and the cycles continues. Humans may get these tapeworms too, but only if they eat infected fleas. Cats with tapeworms should be dewormed by a veterinarian.",
