@@ -1,6 +1,6 @@
 {
   "name": "meowfacts",
-  "version": "0.4.8",
+  "version": "0.4.9",
   "description": "A simple API which returns facts about cats",
   "repository": {
     "type": "git",
@@ -26,7 +26,9 @@
     "Mattazz <https://github.com/mattazz>",
     "lucjosin <https://github.com/LucJosin>",
     "ByMykel <https://github.com/ByMykel/>",
-    "Guillaume-Fgt <https://github.com/Guillaume-Fgt/>"
+    "Guillaume-Fgt <https://github.com/Guillaume-Fgt/>",
+    "mariacristinaI <https://github.com/mariacristinaI/>",
+    "fukingbus <https://github.com/fukingbus/>"
   ],
   "scripts": {
     "cover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && ./node_modules/.bin/codecov",

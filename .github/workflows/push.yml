@@ -11,10 +11,10 @@ jobs:
     steps:
       - name: Checking Out Commits Securely . . .
         uses: actions/checkout@v2
-      - name: Setup Node 14 Environment . . .
-        uses: actions/setup-node@v1
+      - name: Setup Node 16 Environment . . .
+        uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
       - name: Install Dependencies . . .
         working-directory: .
         run: npm ci
@@ -28,10 +28,10 @@ jobs:
     steps:
       - name: Checking Out Commits Securely . . .
         uses: actions/checkout@v2
-      - name: Setup Node 14 Environment . . .
-        uses: actions/setup-node@v1
+      - name: Setup Node 16 Environment . . .
+        uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
       - name: Install Dependencies . . .
         working-directory: .
         run: npm ci
