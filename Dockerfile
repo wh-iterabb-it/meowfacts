@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:16-alpine
 
 # install git creating working directory
 RUN apk update && apk upgrade && \
