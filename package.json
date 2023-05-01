@@ -1,6 +1,9 @@
 {
   "name": "meowfacts",
-  "version": "0.4.9",
+  "version": "0.4.10",
+  "engines": {
+    "node": "16.x"
+  },
   "description": "A simple API which returns facts about cats",
   "repository": {
     "type": "git",
