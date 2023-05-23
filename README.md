@@ -122,8 +122,8 @@ The supported languages are listed below, you can use any of the `lang Values` i
     </a>
   </p>
   <p>
-    <a href="https://www.programmableweb.com/api/meow-facts">
-      <img width="200" height="52" src="https://www.programmableweb.com/sites/default/files/pw-logo.png" />
+    <a href="https://rapidapi.com/wh-iterabb-it-wh-iterabb-it-default/api/meowfacts/">
+      <img width="200" height="52" src="https://rapidapi.com/static-assets/default/dark-logo-78e48dc1-ca3f-4d67-a6f5-74032f439c8b.svg" />
     </a>
   </p>
 </div>
