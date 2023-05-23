@@ -1,0 +1,267 @@
+{
+   "openapi": "3.0.0",
+   "servers": [
+      {
+         "description": "Documentation for https://meowfacts.herokuapp.com, an api for facts about cats, meow facts.",
+         "url": "https://meowfacts.herokuapp.com/"
+      }
+   ],
+   "info": {
+      "description": "This is a simple API to get facts, facts about cats, meow. You can send a simple RESTful request to this enpoint and retrieve a cat fact in different languages.",
+      "version": "0.4.10",
+      "title": "Meow Facts API - Get a Random Cat Fact",
+      "contact": {
+         "email": "admin@wh.iterabb.it",
+         "name": "API Support on Discord",
+         "url": "https://top.gg/servers/1011299565674172436"
+      },
+      "license": {
+         "name": "MIT License",
+         "url": "https://github.com/wh-iterabb-it/meowfacts/blob/main/LICENSE"
+      }
+   },
+   "tags": [
+      {
+         "name": "public",
+         "description": "Operations available to the public"
+      }
+   ],
+   "paths": {
+      "/": {
+         "get": {
+            "tags": [
+               "public"
+            ],
+            "summary": "get a fact about cats, a meow fact",
+            "operationId": "defaultRoot",
+            "description": "By passing in the appropriate options, you can recieve a specific or more than one fact.\n",
+            "parameters": [
+               {
+                  "in": "query",
+                  "name": "factID",
+                  "description": "pass an optional id to call a specific fact",
+                  "required": false,
+                  "schema": {
+                     "type": "string"
+                  }
+               },
+               {
+                  "in": "query",
+                  "name": "count",
+                  "description": "number of facts to return",
+                  "required": false,
+                  "schema": {
+                     "type": "integer",
+                     "format": "int32",
+                     "minimum": 1
+                  }
+               },
+               {
+                  "in": "query",
+                  "name": "lang",
+                  "description": "requested locale to retrieve the cat fact in.",
+                  "required": false,
+                  "schema": {
+                     "type": "string",
+                     "enum": [
+                        "eng",
+                        "ukr",
+                        "rus"
+                     ]
+                  }
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "You just got some meowfacts",
+                  "content": {
+                     "application/json": {
+                        "schema": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "#/components/schemas/fact"
+                           }
+                        }
+                     }
+                  }
+               },
+               "400": {
+                  "description": "bad input parameter",
+                  "content": {
+                     "application/json": {
+                        "schema": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "#/components/schemas/error"
+                           }
+                        }
+                     }
+                  }
+               },
+               "404": {
+                  "description": "fact not found",
+                  "content": {
+                     "application/json": {
+                        "schema": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "#/components/schemas/error"
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      },
+      "/health": {
+        "get": {
+          "tags": [
+            "public"
+          ],
+          "summary": "health check endpoint",
+          "operationId": "healthcheck",
+          "description": "The health check endpoint will return a status of 200 if the api is up and ready to recieve connections. It will tell the uptime, and total requests served since last restart. It also has a field for version which corresponds to the versioned release from the github repo.  \n",
+          "responses": {
+             "200": {
+                "description": "Default Health check response",
+                "content": {
+                   "application/json": {
+                      "schema": {
+                          "$ref": "#/components/schemas/healthcheck"
+                        }
+                      }
+                   }
+                }
+             }
+          }
+      },
+      "/options": {
+        "get": {
+          "tags": [
+            "public"
+          ],
+          "summary": "options discovery endpoint",
+          "operationId": "options",
+          "description": "This endpoint will list all languages available to the root endpoint.   \n",
+          "responses": {
+             "200": {
+                "description": "Default Options Response",
+                "content": {
+                   "application/json": {
+                      "schema": {
+                          "$ref": "#/components/schemas/optionEndpoint"
+                        }
+                      }
+                   }
+                }
+             }
+          }
+      }
+   },
+   "components": {
+      "schemas": {
+         "fact": {
+            "type": "object",
+            "properties": {
+               "data": {
+                  "type": "array",
+                  "items": {
+                     "type": "string",
+                     "example": "In ancient Egypt, killing a cat was a crime punishable by death."
+                  }
+               }
+            }
+         },
+         "error": {
+            "type": "object",
+            "properties": {
+               "code": {
+                  "type": "integer",
+                  "format": "int32",
+                  "example": 400
+               },
+               "message": {
+                  "type": "string",
+                  "example": "Invalid language, valid languages are 'ces', 'eng', 'esp', 'ger', 'rus', 'ukr', 'ces-cz', 'eng-us', 'esp-es', 'esp-mx', 'ger-de', 'rus-ru', 'ukr-au'"
+               },
+               "type": {
+                  "type": "string",
+                  "example": "Bad Request"
+               }
+            }
+         },
+         "healthcheck": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "$ref": "#/components/schemas/healthcheckData"
+              }
+            }
+         },
+        "healthcheckData": {
+          "type": "object",
+          "properties": {
+            "uptime": {
+              "type": "string",
+              "example": "00:00:39:45"
+            },
+            "version": {
+              "type": "string",
+              "example": "0.4.10"
+            },
+            "requests": {
+              "type": "integer",
+              "format": "int32",
+              "example": 129522
+            }
+          }
+        },
+        "optionEndpoint": {
+          "type": "object",
+          "properties": {
+             "lang": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/optionsObject"
+                }
+             }
+          }
+        },
+        "optionsObject": {
+          "type": "object",
+          "properties": {
+            "locale_code": {
+              "type": "string",
+              "example": "us"
+            },
+            "iso_code": {
+              "type": "string",
+              "example": "eng-us"
+            },
+            "full_code": {
+              "type": "string",
+              "example": "eng"
+            },
+            "local_name": {
+              "type": "string",
+              "example": "United States"
+            },
+            "english_name": {
+              "type": "string",
+              "example": "english"
+            },
+            "full_name": {
+              "type": "string",
+              "example": "english (United States)"
+            },
+            "fact_count": {
+              "type": "integer",
+              "format": "int32",
+              "example": 90
+            }
+          }
+        }
+      }
+   }
+}
