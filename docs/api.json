@@ -11,9 +11,9 @@
       "version": "0.4.10",
       "title": "Meow Facts API - Get a Random Cat Fact",
       "contact": {
-         "email": "admin@wh.iterabb.it"
+         "email": "admin@wh.iterabb.it",
          "name": "API Support on Discord",
-         "url": "https://top.gg/servers/1011299565674172436",
+         "url": "https://top.gg/servers/1011299565674172436"
       },
       "license": {
          "name": "MIT License",
@@ -135,7 +135,29 @@
                 }
              }
           }
-        }
+      },
+      "/options": {
+        "get": {
+          "tags": [
+            "public"
+          ],
+          "summary": "options discovery endpoint",
+          "operationId": "options",
+          "description": "This endpoint will list all languages available to the root endpoint.   \n",
+          "responses": {
+             "200": {
+                "description": "Default Options Response",
+                "content": {
+                   "application/json": {
+                      "schema": {
+                          "$ref": "#/components/schemas/optionEndpoint"
+                        }
+                      }
+                   }
+                }
+             }
+          }
+      }
    },
    "components": {
       "schemas": {
@@ -192,6 +214,51 @@
               "type": "integer",
               "format": "int32",
               "example": 129522
+            }
+          }
+        },
+        "optionEndpoint": {
+          "type": "object",
+          "properties": {
+             "lang": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/optionsObject"
+                }
+             }
+          }
+        },
+        "optionsObject": {
+          "type": "object",
+          "properties": {
+            "locale_code": {
+              "type": "string",
+              "example": "us"
+            },
+            "iso_code": {
+              "type": "string",
+              "example": "eng-us"
+            },
+            "full_code": {
+              "type": "string",
+              "example": "eng"
+            },
+            "local_name": {
+              "type": "string",
+              "example": "United States"
+            },
+            "english_name": {
+              "type": "string",
+              "example": "english"
+            },
+            "full_name": {
+              "type": "string",
+              "example": "english (United States)"
+            },
+            "fact_count": {
+              "type": "integer",
+              "format": "int32",
+              "example": 90
             }
           }
         }
