@@ -3,7 +3,7 @@
    "servers": [
       {
          "description": "Documentation for https://meowfacts.herokuapp.com, an api for facts about cats, meow facts.",
-         "url": "https://meowfacts.herokuapp.com/"
+         "url": "https://meowfacts.herokuapp.com"
       }
    ],
    "info": {
