@@ -8,10 +8,12 @@
    ],
    "info": {
       "description": "This is a simple API to get facts, facts about cats, meow. You can send a simple RESTful request to this enpoint and retrieve a cat fact in different languages.",
-      "version": "1.0.1",
+      "version": "0.4.10",
       "title": "Meow Facts API - Get a Random Cat Fact",
       "contact": {
          "email": "admin@wh.iterabb.it"
+         "name": "API Support on Discord",
+         "url": "https://top.gg/servers/1011299565674172436",
       },
       "license": {
          "name": "MIT License",
@@ -184,7 +186,7 @@
             },
             "version": {
               "type": "string",
-              "example": 	"0.4.10"
+              "example": "0.4.10"
             },
             "requests": {
               "type": "integer",
