@@ -92,8 +92,8 @@ const facts = [
 ];
 
 const langName = "tagalog",
-  langISO = "tl",
-  langLocale = "fil",
+  langISO = "fil",
+  langLocale = "tl",
   langLocaleName = "Filipino";
 
 module.exports = {

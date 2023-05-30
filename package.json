@@ -34,11 +34,11 @@
     "fukingbus <https://github.com/fukingbus/>"
   ],
   "scripts": {
-    "cover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && ./node_modules/.bin/codecov",
     "start": "node ./src/app.js",
     "test": "node_modules/.bin/mocha tests/. --recursive",
     "test:lint": "eslint .",
-    "test:lint:fix": "eslint . --fix --ignore-pattern polyfills"
+    "test:lint:fix": "eslint . --fix --ignore-pattern polyfills",
+    "test:coverage": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov"
   },
   "dependencies": {
     "chai-http": "4.3.0",

@@ -84,8 +84,8 @@ const facts = [
 ];
 
 const langName = "urdu",
-  langISO = "ud",
-  langLocale = "urd",
+  langISO = "urd",
+  langLocale = "ud",
   langLocaleName = "urdu";
 
 module.exports = {

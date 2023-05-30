@@ -39,4 +39,22 @@ jobs:
         run: docker build -t wh-iterabb-it/meowfacts .
       - name: Run The Tests . . .
         run: docker run wh-iterabb-it/meowfacts npm run test
-
+  coverage:
+    name: coverage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking Out Commits Securely . . .
+        uses: actions/checkout@v2
+      - name: Setup Node 16 Environment . . .
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install Dependencies . . .
+        working-directory: .
+        run: npm ci
+      - name: Run The Tests . . .
+        run: npm run test:coverage 
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
