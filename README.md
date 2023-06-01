@@ -100,6 +100,7 @@ The supported languages are listed below, you can use any of the `lang Values` i
 | `tl-fil`  | `fil` | Filipino | PH |
 | `ukr-ua`  | `ukr` | Ukrainian | UA |
 | `urd-ur`  | `urd` | Urdu | UR |
+| `ita-it`  | `ita` | Italian | IT |
 | `zho-tw` | `zho` | Chinese | TW (Taiwan) |
 
 
