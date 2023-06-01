@@ -31,7 +31,8 @@
     "ByMykel <https://github.com/ByMykel/>",
     "Guillaume-Fgt <https://github.com/Guillaume-Fgt/>",
     "mariacristinaI <https://github.com/mariacristinaI/>",
-    "fukingbus <https://github.com/fukingbus/>"
+    "fukingbus <https://github.com/fukingbus/>",
+    "AdwaitKulkarni58 <https://github.com/AdwaitKulkarni58/>"
   ],
   "scripts": {
     "start": "node ./src/app.js",
