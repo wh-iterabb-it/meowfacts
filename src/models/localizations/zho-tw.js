@@ -37,7 +37,7 @@ const facts = [
   "第16任美國總統亞伯拉罕·林肯熱愛貓咪，在他居於白宮時曾養了 4 隻貓咪。",
   "凱撒大帝、亨利二世、卡爾十一世以及拿破崙都害怕貓咪。",
   "貓咪平均有 24 條貓鬚，在臉上兩側橫向排列成 4 行。",
-  "「貓」在不同的語言：法語: chat; 德語: katze; 意大利語: gatto; 西班牙語/葡萄牙語: gato; 依地語: kats; 馬耳他語: qattus; 瑞典語/挪威語: katt; 荷蘭語: kat; 冰島語: kottur; 希臘語: catta; 印地語: katas; 日本語:neko; 波蘭語: kot; 烏克蘭語: kotuk; 夏威夷語: popoki; 俄羅斯語: koshka; 拉丁語: cattus; 埃及語: mau; 土耳其語: kedi; 亞美尼亞語: Gatz; 中文: mao; 阿拉伯語: biss; 印尼語: qitta; 保加利亞語: kotka; 馬來語: kucing; 泰語/越南語: meo; 羅馬尼亞語: pisica; 立陶宛語: katinas; 捷克語: kocka; 斯洛伐克語: macka; 巴斯克語: catua; 愛沙尼亞語: kass; 芬蘭語: kissa; 斯瓦希里語: paka.",
+  "「貓」在不同的語言：法語: chat; 德語: katze; 意大利語: gatto; 西班牙語/葡萄牙語: gato; 依地語: kats; 馬耳他語: qattus; 瑞典語/挪威語: katt; 荷蘭語: kat; 冰島語: kottur; 希臘語: catta; 印地語: katas; 日本語:neko; 波蘭語: kot; 烏克蘭語: kotuk; 夏威夷語: popoki; 俄羅斯語: koshka; 拉丁語: cattus; 埃及語: mau; 土耳其語: kedi; 亞美尼亞語: Gatz; 中文: mao; 阿拉伯語: biss; 印尼語: kucing; 保加利亞語: kotka; 馬來語: kucing; 泰語/越南語: meo; 羅馬尼亞語: pisica; 立陶宛語: katinas; 捷克語: kocka; 斯洛伐克語: macka; 巴斯克語: catua; 愛沙尼亞語: kass; 芬蘭語: kissa; 斯瓦希里語: paka.",
   "據統計方式近年寵物愛好者在貓與狗之間更偏向於喜愛貓。",
   "貓咪可以訓練以貓帶牽引散步，但需要很長時間與耐心的訓練。越年輕開始訓練，他們越容易學會。",
   "貓咪發出呼嚕聲不一定代表開心。例如產子後的劇痛也會導致貓咪發出呼嚕聲。小貓也會在哺乳期以呼嚕聲告訴母貓已喝飽奶。呼嚕聲是呼吸的其中一個過程，多數在嘴巴合上時發出。不過別擔心，若輕拍貼近你的貓咪時他發出呼嚕聲，他只是感到開心！",
