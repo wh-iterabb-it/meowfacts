@@ -127,6 +127,11 @@ The supported languages are listed below, you can use any of the `lang Values` i
       <img width="200" height="52" src="https://rapidapi.com/static-assets/default/dark-logo-78e48dc1-ca3f-4d67-a6f5-74032f439c8b.svg" />
     </a>
   </p>
+    <p>
+    <a href="https://meow-facts.netlify.app/">
+      <img width="200" height="52" src="https://img.shields.io/badge/Community_Documentation-FFFFFF.svg?logo=bookstack&logoColor=blue&style=for-the-badge" />
+    </a>
+  </p>
 </div>
 
 
