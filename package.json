@@ -1,6 +1,6 @@
 {
   "name": "meowfacts",
-  "version": "0.4.10",
+  "version": "0.4.11",
   "engines": {
     "node": "16.x"
   },
@@ -32,7 +32,8 @@
     "Guillaume-Fgt <https://github.com/Guillaume-Fgt/>",
     "mariacristinaI <https://github.com/mariacristinaI/>",
     "fukingbus <https://github.com/fukingbus/>",
-    "AdwaitKulkarni58 <https://github.com/AdwaitKulkarni58/>"
+    "AdwaitKulkarni58 <https://github.com/AdwaitKulkarni58/>",
+    "Pritam1136 <https://github.com/Pritam1136/>"
   ],
   "scripts": {
     "start": "node ./src/app.js",
