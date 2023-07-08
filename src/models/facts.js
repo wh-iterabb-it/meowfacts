@@ -19,7 +19,7 @@ function getLanguageFacts(requestedLang) {
     }
   }
 
-  return localizations["eng-us"].facts;
+  return localizations["zho-cn"].facts;
 }
 
 /**
@@ -29,7 +29,7 @@ function getLanguageFacts(requestedLang) {
  * @param {String} lang
  * @returns {String} - a single fact about cats
  **/
-function getSingle(ID = null, lang = "eng-us") {
+function getSingle(ID = null, lang = "zho-cn") {
   const facts = getLanguageFacts(lang);
   if (ID) {
     const id = ID - 1;
