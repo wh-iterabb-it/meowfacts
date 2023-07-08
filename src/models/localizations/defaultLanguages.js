@@ -1,4 +1,4 @@
-const espDefault = require("./esp-es");
+const espDefault = require("./zho-cn");
 
 const defaultLanguages = {
   esp: espDefault,
