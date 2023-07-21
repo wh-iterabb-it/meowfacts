@@ -33,7 +33,8 @@
     "mariacristinaI <https://github.com/mariacristinaI/>",
     "fukingbus <https://github.com/fukingbus/>",
     "AdwaitKulkarni58 <https://github.com/AdwaitKulkarni58/>",
-    "Pritam1136 <https://github.com/Pritam1136/>"
+    "Pritam1136 <https://github.com/Pritam1136/>",
+    "busches <https://github.com/busches/>"
   ],
   "scripts": {
     "start": "node ./src/app.js",
