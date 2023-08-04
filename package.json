@@ -1,6 +1,6 @@
 {
   "name": "meowfacts",
-  "version": "0.4.11",
+  "version": "0.4.12",
   "engines": {
     "node": "16.x"
   },
@@ -34,7 +34,8 @@
     "fukingbus <https://github.com/fukingbus/>",
     "AdwaitKulkarni58 <https://github.com/AdwaitKulkarni58/>",
     "Pritam1136 <https://github.com/Pritam1136/>",
-    "busches <https://github.com/busches/>"
+    "busches <https://github.com/busches/>",
+    "sonseong10 <https://github.com/sonseong10/>"
   ],
   "scripts": {
     "start": "node ./src/app.js",
