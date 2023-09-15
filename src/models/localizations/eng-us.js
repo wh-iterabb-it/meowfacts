@@ -88,6 +88,7 @@ const facts = [
   "Cats can jump up to six times their length.",
   "Cats have contributed to the extinction of 33 different species.",
   "Cats can drink sea water in order to survive.",
+  "Cheetahs communicate by purring and meowing like housecats, they cannot roar like big cats (e.g. lions).",
 ];
 
 const langName = "english",

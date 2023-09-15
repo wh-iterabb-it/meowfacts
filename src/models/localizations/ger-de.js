@@ -16,7 +16,7 @@ const facts = [
   "Katzen können süß nicht schmecken",
   "Katzen benötigen Fett in ihrem Diätfutter, da sie dieses nicht selbst produzieren können.",
   "Einige übliche Hauspflanzen sind giftig für Katzen. Darunter sind: Efeu, Schwertlilie, Mistelzweig, Philodendron und Eibe.",
-  "Tylenol und Schokolade sind für Katzen giftig.",
+  "Paracetamol und Schokolade sind für Katzen giftig.",
   "Viele Katzen können Kuhmilch nicht richtig verdauen. Milch und Milchprodukte sorgen daher für Durchfall bei Katzen.",
   "Die durchschnittliche Katzenfutter Portion ist equivalent zu ungefähr fünf Mäusen.",
   "Katzen können durch das Fressen von Flöhen Bandwürmer bekommen. Diese Würmer leben für immer in der Katze, oder bis sie mit Medikamenten entfernt werden. Sie vermehren sich, indem sie ein Glied am Ende ihres langen Körpers abwerfen. Dieses Glied krabbelt aus dem Anus der Katze und legt Hunderte von Eiern ab. Diese Eier werden von Flohlarven aufgenommen, und der Kreislauf setzt sich fort. Auch Menschen können diese Bandwürmer bekommen, aber nur, wenn sie infizierte Flöhe essen. Katzen mit Bandwürmern sollten von einem Tierarzt entwurmt werden.",
@@ -98,6 +98,7 @@ const facts = [
   "Katzen können bis zum Sechsfachen ihrer Körperlänge hoch springen.",
   "Katzen haben zum Aussterben von 33 verschiedenen Arten beigetragen.",
   "Katzen können Meerwasser trinken, um zu überleben.",
+  "Geparden können nicht brüllen wie Großkatzen (z.B. Löwen), sondern miauen und schnurren wie typische Hauskatzen",
 ];
 const langName = "german",
   langISO = "ger",
