@@ -36,7 +36,8 @@
     "Pritam1136 <https://github.com/Pritam1136/>",
     "busches <https://github.com/busches/>",
     "sonseong10 <https://github.com/sonseong10/>",
-    "Whiskydog <https://github.com/Whiskydog/>"
+    "Whiskydog <https://github.com/Whiskydog/>",
+    "DerTimonius <https://github.com/DerTimonius/>"
   ],
   "scripts": {
     "start": "node ./src/app.js",
