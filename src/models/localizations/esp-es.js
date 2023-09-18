@@ -10,7 +10,7 @@ const facts = [
   "Los gatos no pueden saborear los dulces.",
   "Los gatos deben tener grasa en su dieta porque no pueden producirla por sí mismos.",
   "Algunas plantas de interior comunes venenosas para los gatos incluyen: Hiedra inglesa, iris, muérdago, filodendro y tejo.",
-  "El Tylenol y el chocolate son venenosos para los gatos.",
+  "El paracetamol y el chocolate son venenosos para los gatos.",
   "Muchos gatos no pueden digerir correctamente la leche de vaca. La leche y los productos lácteos les provocan diarrea.",
   "La comida media de un gato equivale a unos cinco ratones.",
   "Los gatos pueden contraer tenias por comer pulgas. Estos gusanos viven dentro del gato para siempre, o hasta que se eliminan con medicación. Se reproducen desprendiendo un eslabón del extremo de sus largos cuerpos. Este eslabón sale por el ano del gato y desprende cientos de huevos. Estos huevos son ingeridos por larvas de pulga, y el ciclo continúa. Los humanos también pueden contraer estas tenias, pero sólo si comen pulgas infectadas. Los gatos con tenias deben ser desparasitados por un veterinario.",
