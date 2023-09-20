@@ -84,12 +84,12 @@ const facts = [
 	// "Evidence suggests domesticated cats have been around since 3600 B.C., 2,000 years before Egypts pharaohs.",
 	// "A cats purr may be a form of self-healing, as it can be a sign of nervousness as well as contentment. Similarly, the frequency of a domestic cats purr is the same at which muscles and bones repair themselves.",
 	// "Adult cats only meow to communicate with humans.",
-	// "The worlds richest cat is worth $13 million after his human passed away and left her fortune to him.",
+	"বিশ্বের সবচেয়ে ধনী বিড়ালের মূল্য 1 কোটি  30 লাখ ডলার তার মালিক  মারা যাওয়ার পরে সে সব টাকা পায়ে ।",
 	// "Your cat recognizes your voice but just acts too cool to care (probably because they are).",
-	// "Cats are often lactose intolerant, so stop givin them milk!",
-	// "Cats can jump up to six times their length.",
-	// "Cats have contributed to the extinction of 33 different species.",
-	// "Cats can drink sea water in order to survive.",
+	"বিড়াল প্রায়ই ল্যাকটোজ সহ্য করতে পারে না, তাই তাদের দুধ দেওয়া বন্ধ করুন!",
+	"বিড়াল তাদের দৈর্ঘ্যের ছয় গুণ পর্যন্ত লাফ দিতে পারে",
+	"বিড়াল 33টি বিভিন্ন প্রজাতির বিলুপ্তিতে অবদান রেখেছে।",
+	"বিড়াল বেঁচে থাকার জন্য সমুদ্রের জল পান করতে পারে ",
 	// "Cheetahs communicate by purring and meowing like housecats, they cannot roar like big cats (e.g. lions).",
 ];
 
