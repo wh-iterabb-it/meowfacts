@@ -38,7 +38,8 @@
     "sonseong10 <https://github.com/sonseong10/>",
     "Whiskydog <https://github.com/Whiskydog/>",
     "DerTimonius <https://github.com/DerTimonius/>",
-    "Gilsabo <https://github.com/Gilsabo>"
+    "Gilsabo <https://github.com/Gilsabo>",
+    "dshaw0004 <https://github.com/dshaw0004>"
   ],
   "scripts": {
     "start": "node ./src/app.js",
@@ -56,7 +57,7 @@
   "devDependencies": {
     "chai": "4.3.8",
     "codecov": "3.8.3",
-    "eslint": "8.49.0",
+    "eslint": "^8.49.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-import": "2.28.1",
     "eslint-plugin-prettier": "4.2.1",
