@@ -70,6 +70,39 @@ describe("Testing Models", () => {
         });
       });
     });
+    describe("BEN - Indian Localization", () => {
+      describe("getSingle", () => {
+        it("it should return a single fact of random", () => {
+          const actual = facts.getSingle(null, "ben");
+          expect(actual).to.be.a("string");
+        });
+        it("it should return the single fact of ID 1", () => {
+          const actualOne = facts.getSingle(1, "ben");
+          const expectedOne =
+            "1987 সালে আমেরিকার এক নম্বর পোষা প্রাণী হিসাবে বিড়াল কুকুরকে ছাড়িয়ে যায়।";
+          expect(actualOne).to.be.a("string");
+          expect(actualOne).to.be.equal(expectedOne);
+        });
+        it("it should return the single fact of ID 3", () => {
+          const actualThree = facts.getSingle(3, "ben");
+          const expectedThree =
+            "মা বিড়াল তাদের বিড়ালছানাদের লিটার বাক্স ব্যবহার করতে শেখায়।";
+          expect(actualThree).to.be.a("string");
+          expect(actualThree).to.be.equal(expectedThree);
+        });
+      });
+      describe("BEN - getMany", () => {
+        it("it should return an array of 3 facts of random", () => {
+          const actual = facts.getMany(3, "ben");
+          const allFacts = facts.getLanguageFacts("ben");
+          expect(actual).to.be.a("array");
+          expect(actual[0]).to.be.a("string");
+          expect(actual.length).to.be.equal(3);
+          expect(allFacts).to.deep.include(actual[0]);
+
+        });
+      });
+    });
     describe("ESP-ES - Spanish - Spain Localization", () => {
       describe("getSingle", () => {
         it("it should return a single fact of random", () => {
