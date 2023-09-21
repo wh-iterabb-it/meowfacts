@@ -37,7 +37,8 @@
     "busches <https://github.com/busches/>",
     "sonseong10 <https://github.com/sonseong10/>",
     "Whiskydog <https://github.com/Whiskydog/>",
-    "DerTimonius <https://github.com/DerTimonius/>"
+    "DerTimonius <https://github.com/DerTimonius/>",
+    "Gilsabo <https://github.com/Gilsabo>"
   ],
   "scripts": {
     "start": "node ./src/app.js",
