@@ -93,6 +93,7 @@ The supported languages are listed below, you can use any of the `lang Values` i
 | `eng-us`  | `eng` | English | USA |
 | `ces-cz` or `cze-cz` | `cze` (B) `ces` (T) | Czech | CZ |
 | `ger-de`  | `ger` | German | DE |
+| `ben-in`  | `ben` | Bengali | IN |
 | `esp-es`  | `esp` | Spanish | ES |
 | `esp-mx`  | `esp` | Spanish (default) | MX |
 | `rus-ru`  | `rus` | Russian | RUS |
