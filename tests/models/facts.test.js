@@ -79,7 +79,7 @@ describe("Testing Models", () => {
         it("it should return the single fact of ID 1", () => {
           const actualOne = facts.getSingle(1, "ben");
           const expectedOne =
-            "1987 সালে আমেরিকার এক নম্বর পোষা প্রাণী হিসাবে বিড়াল কুকুরকে ছাড়িয়ে যায়।";
+            "১৯৮৭(1987) সালে আমেরিকার এক নম্বর পোষা প্রাণী হিসাবে বিড়াল কুকুরকে ছাড়িয়ে যায়।";
           expect(actualOne).to.be.a("string");
           expect(actualOne).to.be.equal(expectedOne);
         });
