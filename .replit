@@ -1,4 +1,0 @@
-run = "npm run test:lint:fix & npm run test"
-
-[nix]
-channel = "stable-22_11"
