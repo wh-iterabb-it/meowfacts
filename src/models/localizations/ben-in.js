@@ -1,3 +1,17 @@
+// bengali numbers (for other developers)
+// ১ - 1
+// ২ - 2
+// ৩ - 3
+// ৪ - 4
+// ৫ - 5
+// ৬ - 6
+// ৭ - 7
+// ৮ - 8
+// ৯ - 9
+// ০ - 0
+// bengali have few numbers similar to english but they have different value
+// don't be confused
+
 const facts = [
   "১৯৮৭(1987) সালে আমেরিকার এক নম্বর পোষা প্রাণী হিসাবে বিড়াল কুকুরকে ছাড়িয়ে যায়।",
   "যেসব বিড়াল একসাথে থাকে তারা মাঝে মাঝে একে অপরের মাথা ঘষে দেখায় যে তাদের লড়াই করার কোন ইচ্ছা নেই। অল্পবয়সী বিড়ালরা এটি প্রায়শই করে, বিশেষ করে যখন তারা উত্তেজিত হয়।",
@@ -64,26 +78,26 @@ const facts = [
   // "A cat's whiskers are thought to be a kind of radar, which helps a cat gauge the space it intends to walk through.",
   // "A cat can spend five or more hours a day grooming himself.",
   // "All cats have three sets of long hairs that are sensitive to pressure - whiskers, eyebrows,and the hairs between their paw pads.",
-  // "Both humans and cats have identical regions in the brain responsible for emotion.",
+  "মানুষ এবং বিড়াল উভয়ের মস্তিষ্কের এক‌ই অঞ্চল আবেগের জন্য দায়ী।",
   // "A cat's brain is more similar to a man's brain than that of a dog.",
   // "A cat has more bones than a human; humans have 206, and the cat - 230.",
   // "Cats have 30 vertebrae--5 more than humans have.",
-  // "Cats are the most popular pet in the United States: There are 88 million pet cats and 74 million dogs.",
-  // "Cats have over 20 muscles that control their ears.",
-  // "A group of cats is called a clowder.",
-  // "There are cats who have survived falls from over 32 stories (320 meters) onto concrete.",
-  // "Cats sleep 70% of their lives.",
-  // "A cat has been mayor of Talkeetna, Alaska, for 15 years. His name is Stubbs.",
-  // "A cat has ran for mayor of Mexico City in 2013.",
+  "বিড়াল মার্কিন যুক্তরাষ্ট্র আমেরিকার সবচেয়ে জনপ্রিয় পোষা প্রাণী: এখানে ৮ কোটি ৮০ লক্ষ পোষা বিড়াল এবং ৭ কোটি ৪০ লক্ষ কুকুর রয়েছে।",
+  "বিড়ালের ২০ টিরও বেশি পেশী থাকে যা তাদের কান নিয়ন্ত্রণ করে।",
+  "একদল বিড়ালকে ক্লাউডার(clowder) বলা হয়।",
+  "এমন বিড়াল আছে যারা ৩২ তলা (৩২০ মিটার) থেকে সিমেন্টের উপর পড়ে থেকে বেঁচে গেছে।",
+  "বিড়ালরা তাদের জীবনের 70% ঘুমায়।",
+  "একটি বিড়াল 15 বছর ধরে আলাস্কার তালকিতনা-র মেয়র। তার নাম স্টাবস।",
+  "2013 সালে মেক্সিকো সিটির মেয়র পদে একটি বিড়াল দাঁড়িয়েছে",
   // "In tigers and tabbies, the middle of the tongue is covered in backward-pointing spines, used for breaking off and gripping meat.",
   // 'When cats grimace, they are usually "taste-scenting." They have an extra organ that, with some breathing control, allows the cats to taste-sense the air.',
   // "Cats can not taste sweetness.",
-  // "Owning a cat can reduce the risk of stroke and heart attack by a third.",
-  // "Wikipedia has a recording of a cat meowing because why not?",
-  // "The worlds largest cat measured 48.5 inches long. https://www.youtube.com/watch?v=gc5M0aGc_EI",
+  "একটি বিড়ালের মালিকানা স্ট্রোক এবং হার্ট অ্যাটাকের ঝুঁকি এক তৃতীয়াংশ কমাতে পারে।",
+  "উইকিপিডিয়াতে একটি বিড়াল মেয়াও করার রেকর্ডিং আছে কারণ কেন নয়?",
+  " বিশ্বের বৃহত্তম বিড়ালটি 48.5 ইঞ্চি লম্বা। https://www.youtube.com/watch?v=gc5M0aGc_EI",
   // "Evidence suggests domesticated cats have been around since 3600 B.C., 2,000 years before Egypts pharaohs.",
   // "A cats purr may be a form of self-healing, as it can be a sign of nervousness as well as contentment. Similarly, the frequency of a domestic cats purr is the same at which muscles and bones repair themselves.",
-  // "Adult cats only meow to communicate with humans.",
+  "প্রাপ্তবয়স্ক বিড়ালরা মানুষের সাথে যোগাযোগ করার জন্য শুধুমাত্র মেয়াও (meow) করে।",
   "বিশ্বের সবচেয়ে ধনী বিড়ালের মূল্য 1 কোটি  30 লাখ ডলার তার মালিক  মারা যাওয়ার পরে সে সব টাকা পায়ে ।",
   // "Your cat recognizes your voice but just acts too cool to care (probably because they are).",
   "বিড়াল প্রায়ই ল্যাকটোজ সহ্য করতে পারে না, তাই তাদের দুধ দেওয়া বন্ধ করুন!",
