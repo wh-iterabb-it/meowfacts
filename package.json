@@ -57,7 +57,7 @@
   "devDependencies": {
     "chai": "4.3.10",
     "codecov": "3.8.3",
-    "eslint": "^8.51.0",
+    "eslint": "^8.53.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-import": "2.29.0",
     "eslint-plugin-prettier": "4.2.1",
