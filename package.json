@@ -58,7 +58,7 @@
     "chai": "4.3.10",
     "codecov": "3.8.3",
     "eslint": "^8.55.0",
-    "eslint-config-prettier": "9.0.0",
+    "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.29.0",
     "eslint-plugin-prettier": "4.2.1",
     "mocha": "10.2.0",
