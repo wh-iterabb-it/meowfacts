@@ -15,7 +15,7 @@ WORKDIR /usr/src/app
 RUN npm install
 
 # expose server port
-EXPOSE 3000-5001
+EXPOSE 5000
 
 # launch application
 CMD ["npm","start"]
