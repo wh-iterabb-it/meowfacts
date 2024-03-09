@@ -1,8 +1,8 @@
 {
   "name": "meowfacts",
-  "version": "0.4.13",
+  "version": "0.4.14",
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "description": "A simple API which returns facts about cats",
   "repository": {
@@ -39,7 +39,8 @@
     "Whiskydog <https://github.com/Whiskydog/>",
     "DerTimonius <https://github.com/DerTimonius/>",
     "Gilsabo <https://github.com/Gilsabo>",
-    "dshaw0004 <https://github.com/dshaw0004>"
+    "dshaw0004 <https://github.com/dshaw0004>",
+    "STAR-173 <https://github.com/STAR-173>"
   ],
   "scripts": {
     "start": "node ./src/app.js",
