@@ -56,7 +56,7 @@
     "sst": "git+https://github.com/wh-iterabb-it/sst.git"
   },
   "devDependencies": {
-    "chai": "4.3.10",
+    "chai": "5.1.1",
     "codecov": "3.8.3",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "9.1.0",
