@@ -1,4 +1,4 @@
-meowfacts
+meowfacts Guide
 =========
 
 [![Issues](https://img.shields.io/github/issues/wh-iterabb-it/meowfacts.svg)](https://github.com/wh-iterabb-it/meowfacts/issues)
