@@ -89,6 +89,7 @@ const facts = [
   "Cats have contributed to the extinction of 33 different species.",
   "Cats can drink sea water in order to survive.",
   "Cheetahs communicate by purring and meowing like housecats, they cannot roar like big cats (e.g. lions).",
+  "80% of orange cats are male",
 ];
 
 const langName = "english",
