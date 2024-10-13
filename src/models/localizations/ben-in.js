@@ -105,6 +105,7 @@ const facts = [
   "বিড়াল 33টি বিভিন্ন প্রজাতির বিলুপ্তিতে অবদান রেখেছে।",
   "বিড়াল বেঁচে থাকার জন্য সমুদ্রের জল পান করতে পারে ",
   // "Cheetahs communicate by purring and meowing like housecats, they cannot roar like big cats (e.g. lions).",
+  "৮০ শতাংশের বেশিই লাল বিড়ালেরা পুরুষ হয়।",
 ];
 
 const langName = "bengali",
