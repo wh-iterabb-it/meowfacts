@@ -90,6 +90,7 @@ const facts = [
   "Cats can drink sea water in order to survive.",
   "Cheetahs communicate by purring and meowing like housecats, they cannot roar like big cats (e.g. lions).",
   "80% of orange cats are male",
+  "Cat ears can rotate 180 degrees.",
 ];
 
 const langName = "english",
