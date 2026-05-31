@@ -50,20 +50,21 @@
     "test:coverage": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov"
   },
   "dependencies": {
-    "chai-http": "4.4.0",
-    "express": "4.19.2",
-    "helmet": "7.1.0",
+    "chai-http": "5.1.1",
+    "express": "4.21.1",
+    "helmet": "8.0.0",
+    "meowfacts": "file:",
     "sst": "git+https://github.com/wh-iterabb-it/sst.git"
   },
   "devDependencies": {
-    "chai": "4.3.10",
+    "chai": "5.1.1",
     "codecov": "3.8.3",
-    "eslint": "^8.57.0",
+    "eslint": "^9.12.0",
     "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-prettier": "4.2.1",
-    "mocha": "10.4.0",
-    "nyc": "15.1.0",
-    "prettier": "2.8.8"
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "mocha": "10.7.3",
+    "nyc": "17.1.0",
+    "prettier": "3.3.3"
   }
 }
