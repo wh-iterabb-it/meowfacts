@@ -104,6 +104,7 @@ The supported languages are listed below, you can use any of the `lang Values` i
 | `ita-it`  | `ita` | Italian | IT |
 | `zho-tw` | `zho` | Chinese | TW (Taiwan) |
 | `kor-ko`  | `kor` | Korean | KO |
+| `heb-il` | `heb` | Hebrew | IL (Israel) |
 
 
 <details>

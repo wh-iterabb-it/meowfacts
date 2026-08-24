@@ -40,7 +40,8 @@
     "DerTimonius <https://github.com/DerTimonius/>",
     "Gilsabo <https://github.com/Gilsabo>",
     "dshaw0004 <https://github.com/dshaw0004>",
-    "STAR-173 <https://github.com/STAR-173>"
+    "STAR-173 <https://github.com/STAR-173>",
+    "Or Perry <https://github.com/orperry>"
   ],
   "scripts": {
     "start": "node ./src/app.js",
